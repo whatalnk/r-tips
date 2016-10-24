@@ -1,0 +1,17 @@
+---
+title: "Load many packages at once"
+output: html_notebook
+---
+
+```{r}
+date()
+```
+```{r}
+sapply(c("pipeR", "dplyr", "tidyr", "ggplot2"), require, character.only = TRUE)
+```
+
+
+```{r}
+devtools::session_info()
+```
+
