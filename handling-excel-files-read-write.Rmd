@@ -1,0 +1,67 @@
+---
+title: "Handling Excel files; reading and writing"
+output: html_notebook
+---
+* Reading: `readxl`
+* Writing: `openxlsx`
+
+```{r}
+sapply(c("pipeR", "openxlsx", "readxl"), require, character.only = TRUE)
+```
+## One data, one sheet 
+
+Data
+
+```{r}
+data("iris")
+d <- iris
+head(d)
+```
+
+* Write
+```{r}
+openxlsx::write.xlsx(d, "iris.xlsx")
+```
+
+* Read
+```{r}
+dd <- readxl::read_excel("iris.xlsx", sheet = 1)
+str(dd)
+```
+
+## More than one data
+
+Another data
+```{r}
+data("airquality")
+d2 <- airquality
+head(d2)
+```
+
+* write
+```{r}
+wb <- openxlsx::createWorkbook()
+openxlsx::addWorksheet(wb, "iris")
+openxlsx::addWorksheet(wb, "airquality")
+openxlsx::writeData(wb, sheet = "iris", d)
+openxlsx::writeData(wb, sheet = "airquality", d2)
+openxlsx::saveWorkbook(wb, "iris-and-airquality.xlsx")
+```
+
+* read
+```{r}
+sheetnames <- readxl::excel_sheets("iris-and-airquality.xlsx")
+sheetnames
+```
+
+```{r}
+sheetnames %>>% sapply(function(x){
+  sh <- readxl::read_excel("iris-and-airquality.xlsx", sheet = x)
+  sh
+}) -> dd.list
+str(dd.list)
+```
+
+```{r}
+devtools::session_info()
+```
