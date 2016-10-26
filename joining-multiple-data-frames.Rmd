@@ -1,0 +1,32 @@
+---
+title: "Joining multiple data frames"
+output: html_notebook
+---
+
+
+```{r}
+sapply(c("pipeR","dplyr"), require, character.only = TRUE)
+```
+
+```{r}
+d1 <- data.frame(year = seq(2000, 2015, 1), v1 = rnorm(n = 16))
+d2 <- data.frame(year = seq(1995, 2010, 1), v2 = rnorm(n = 16))
+d3 <- data.frame(year = seq(2000, 2010, 1), v3 = rnorm(n = 11))
+list(d1, d2, d3) %>>% str()
+
+```
+
+```{r}
+list(d1, d2, d3) %>>% {Reduce(dplyr::full_join, (.))} -> d
+head(d)
+```
+
+```{r}
+list(d1, d2, d3) %>>% 
+  {Reduce(dplyr::full_join, (.))} %>>% 
+  dplyr::arrange(desc(year))
+```
+
+```{r}
+devtools::session_info()
+```
