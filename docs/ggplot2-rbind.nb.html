@@ -204,7 +204,7 @@ $(document).ready(function () {
 <pre class="r"><code>d1 &lt;- read_csv(&quot;data/ggplot2-two-axis/naha.csv&quot;, skip = 5, col_names = c(&quot;Date&quot;, &quot;Temperature&quot;, &quot;Precipitation&quot;), col_types = cols(col_date(format = &quot;%Y/%m&quot;), &quot;d&quot;, &quot;_&quot;, &quot;_&quot;, &quot;d&quot;, &quot;_&quot;, &quot;_&quot;, &quot;_&quot;), locale = locale(encoding = &quot;SJIS&quot;))
 head(d1)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInRibF9kZiIsInRibCIsImRhdGEuZnJhbWUiXSwibmNvbCI6MywibnJvdyI6Nn0sInJkZiI6Ikg0c0lBQUFBQUFBQUJtMVJ3VW9ETVJCTms5MUtWN1lLZXZQb1ViclVGb29IRHdFTFhrVUU2ekZ1VTd1NHpTN1pGRDMyTi9RckN2NkFINkRRVC9Ea1Izam9tdXdrMGk0TzdMN0ptNWszTThuMWNOUUxSZ0ZDQ0NOQ01NSkV1eDdXdndieVVNdmdNMExrUURzNlF0b2FtM1FWSW1OMGRmZ09lR1R4ZUFGNFl1TzlpcThKK25IS2lrSTcreHVrTjJTS2ExenJENXAwWDR5OTB1NkhzVS9hQnlrNjZGZEd6NzRueHVqNVczWCtxeHZZdk1zRjRPMFg0SjNscDB2QUM0VCtHMDZ3R1hmRGthM2h3Tis5NGJPY1M2Ym0wbEhobGVSeGtpZUtxU1FUTmNHV3pKNGlKMnJ1RFp1NXlyTDhnVVJjMW00aUdEUEZvb25VSlhBZlczSTdXVzZhYURGczNzU3ZGVGRramRpYkM5TjgzSW1uYy9IWU9UVU5xakJZYVAzbWhrK2dKWEdEK1ZhcXljVkRJdHpTZnNydWVXb1BiYjFrdFdPVXkwUW90NGxtaTBobGlybThJTTVTeDhCYnIzOEJuK3djcW9FQ0FBQT0ifQ== -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInRibF9kZiIsInRibCIsImRhdGEuZnJhbWUiXSwibmNvbCI6MywibnJvdyI6Nn0sInJkZiI6Ikg0c0lBQUFBQUFBQUJtMVJ3VXJEUUJEZDdqYVJSbElGdlhuMEtBMmxoZUxCdzRJRnJ5S0M5YmltV3h0TU4yR3pRWS85RGYwS3dSL3dBeFQ2Q1o3OENBK051NWxkYVlNRHladDlNL05tWnZkcVBCa0Vrd0FoaEJFaEdHR2kzVGJXdnhacW80N0JKNFRJZ1haMGhIUTErblFWSW1OMGRmZ09lR1R4ZUFsNFl1T0RtbThJZW5IS2lrSTcreHRrZTh3VTE3aldIelRwUHh0N29mMFBZNTkwQ0ZKME5LeU5ubjdQak5HenQvcjhWemV5ZVJkTHdKc3Z3RnZMejE4Qnp4SDZiempCRnR3TlI3YUdBMy8zbWk5eUxwa3FwYVBDUzhuakpFOFVVMGttR29JZG1UMUdUdFRjR3paelZWWDFBNG00YXR4RU1HV0tSVE9wUytBK3R1UjJzdHcwMFdMWXZJblhLRzdKQnJGWEN0Tjgyb3ZucFhqb0RVeURPZ3dXV3QvZjhBbTBKRzR3ejByNVhOd253aTN0cGV5T3AvYlExVXZXTzBhNVRJUnltMmkyaUZTbW1Nc0w0aXgxREx6MStoZjVpdjRQZ1FJQUFBPT0ifQ== -->
 <div data-pagedtable>
 <script data-pagedtable-source type="application/json">
 {"columns":[{"label":["Date"],"name":[1],"type":["date"],"align":["right"]},{"label":["Temperature"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["Precipitation"],"name":[3],"type":["dbl"],"align":["right"]}],"data":[{"1":"2015-01-01","2":"16.6","3":"22.0"},{"1":"2015-02-01","2":"16.8","3":"47.0"},{"1":"2015-03-01","2":"19.0","3":"95.5"},{"1":"2015-04-01","2":"22.2","3":"100.0"},{"1":"2015-05-01","2":"24.9","3":"197.5"},{"1":"2015-06-01","2":"28.7","3":"38.0"}],"options":{"columns":{"min":{},"max":[10],"total":[3]},"rows":{"min":[10],"max":[10],"total":[6]},"pages":{}}}
@@ -245,7 +245,7 @@ gp1</code></pre>
 <pre class="r"><code>d2 &lt;- read_csv(&quot;data/ggplot2-two-axis/kushiro.csv&quot;, skip = 5, col_names = c(&quot;Date&quot;, &quot;Temperature&quot;, &quot;Precipitation&quot;), col_types = cols(col_date(format = &quot;%Y/%m&quot;), &quot;d&quot;, &quot;_&quot;, &quot;_&quot;, &quot;d&quot;, &quot;_&quot;, &quot;_&quot;, &quot;_&quot;), locale = locale(encoding = &quot;SJIS&quot;))
 head(d2)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInRibF9kZiIsInRibCIsImRhdGEuZnJhbWUiXSwibmNvbCI6MywibnJvdyI6Nn0sInJkZiI6Ikg0c0lBQUFBQUFBQUJsMVJ6VXJFTUJET0ptMWxLMTBGeFlzWFFTOGlXM0I5QUlQczBZUDRnNzNHYmxhTDNiU2tLWHJjUi9GUitnQUsrendLVzVOT0Fyc2RTTC9wTnpQZnpDVDMwMlFTSmlGQ0NDTkNNTUpFdXg3V253SHkwTkRnSjBMa1FEczZRa1lhQTdxS2tERzZPbXdBankyZUxnRXZiSHpTOFQxQlA4MVpWV2xuZjRQMHBreHhqV3Q5dWlaTk9PK3NRZC9HZnE3L3JqcWpSeUJKejRDbjU0Q3VqdDRzSWY1d0FwaFlmUG9DdklXWjZEUGs5WWNUYk1IZGNHUnJPUEIzSC9taTVKS3BXam9xdXBNOHpjcE1NWlVWb2ljNGxNVkg3RVROdldIVHQyM2JYMGpFYmU4bXdobFRMSjVMWFFMM3NTVzNVNVNtaVJiRDVrMzhYdkZBOW9pOVdwam1zM0g2Vm92MzhhVnAwSVhCSXVzSEd6NkJsc1FONWx1cGdJdlhUTGlsL1p5OThOeitqUFNTM1k1eEtUT2gzQ2FhcldKVktPYnl3clRJSFFOdnZmNEg1ZGJ5cFlFQ0FBQT0ifQ== -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInRibF9kZiIsInRibCIsImRhdGEuZnJhbWUiXSwibmNvbCI6MywibnJvdyI6Nn0sInJkZiI6Ikg0c0lBQUFBQUFBQUJsMVJ6VXJFTUJET0ptMWxLMTBGeFlzWFFTOGkyOFBxM1NCNzlDRCtZSyt4bTlWaU55MXBpaDczVVh5VVBvRENQby9DMXFUVHdHNEcwbS82emN3M004bjlOSm1FU1lnUXdvZ1FqRERScm9mMVo0QThORFQ0aVJBNTBJNk9rSkhHZ0s0aVpJeXVEaHZBNHg1UGw0QVhmWHpTOFk2Z24rYXNxclN6djBGNlU2YTR4clUrWFpNbW5IZldvRzlqUDlkL2w1M1JJNUNrWjhEVGMwQmJSMitXRUg4NEFVeDZmUG9DdklXWjZEUGt1Y01KdHVCMk9MSTFIUGk3ajN4UmNzbFVMUzBWM1VtZVptV21tTW9LNFFnT1pmRVJXMUZ6YjlqMGJkdjJGeEp4Njl4RU9HT0t4WE9wUytBK3R1UjJpdEkwMFdMWXZJbnZGQStrUSt6VndqU2ZqZE8zV3J5UHIweURMZ3dXOVg2dzRSTm9TZXhnZmk4VmNQR2FDYnUwbjdNWG52Yy9JNzFrdDJOY3lrd291NGxtcTFnVml0bThNQzF5eThCYnIvOEJEbnFsa0lFQ0FBQT0ifQ== -->
 <div data-pagedtable>
 <script data-pagedtable-source type="application/json">
 {"columns":[{"label":["Date"],"name":[1],"type":["date"],"align":["right"]},{"label":["Temperature"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["Precipitation"],"name":[3],"type":["dbl"],"align":["right"]}],"data":[{"1":"2015-01-01","2":"-3.3","3":"37.0"},{"1":"2015-02-01","2":"-2.1","3":"76.5"},{"1":"2015-03-01","2":"1.7","3":"96.5"},{"1":"2015-04-01","2":"5.5","3":"86.5"},{"1":"2015-05-01","2":"10.4","3":"57.5"},{"1":"2015-06-01","2":"12.9","3":"94.0"}],"options":{"columns":{"min":{},"max":[10],"total":[3]},"rows":{"min":[10],"max":[10],"total":[6]},"pages":{}}}
@@ -297,23 +297,9 @@ gp2</code></pre>
 <p>Share X axis</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZ3AxIDwtIGQxICU+PiUgZ2dwbG90KCkgKyBcbiAgZ2VvbV9zZWdtZW50KG1hcHBpbmcgPSBhZXMoeCA9IERhdGUsIHkgPSBQcmVjaXBpdGF0aW9uICogMzAgLyA0MDAsIHhlbmQgPSBEYXRlLCB5ZW5kID0gMCksIHNpemUgPSAxMSwgbGluZWVuZCA9IFwiYnV0dFwiLCBjb2xvdXIgPSBncmF5KDAuNSkpICtcbiAgZ2VvbV9saW5lKG1hcHBpbmcgPSBhZXMoeCA9IERhdGUsIHkgPSBUZW1wZXJhdHVyZSkpICsgXG4gIGdlb21fcG9pbnQobWFwcGluZyA9IGFlcyh4ID0gRGF0ZSwgeSA9IFRlbXBlcmF0dXJlKSwgc2l6ZSA9IDMsIHNoYXBlID0gMjEsIGZpbGwgPSBcIndoaXRlXCIpICsgXG4gIHNjYWxlX3hfZGF0ZShuYW1lID0gXCJNb250aFwiLCBicmVha3MgPSBzZXEuRGF0ZShhcy5EYXRlKFwiMjAxNS0wMS0wMVwiKSwgYXMuRGF0ZShcIjIwMTUtMTItMzFcIiksIGJ5ID0gXCIxIG1vbnRoXCIpLCBsYWJlbHMgPSBmdW5jdGlvbihkYXRlKXtyZXR1cm4obW9udGgoZGF0ZSwgbGFiZWwgPSBUUlVFKSl9KSArIFxuICBzY2FsZV95X2NvbnRpbnVvdXMoXG4gICAgbmFtZSA9IGV4cHJlc3Npb24oXCJUZW1wZXJhdHVyZSAoXCJ+ZGVncmVlflwiQylcIiksIFxuICAgIHNlYy5heGlzID0gc2VjX2F4aXMofiAuICogNDAwIC8gMzAgLCBuYW1lID0gXCJQcmVjaXBpdGF0aW9uIChtbSlcIiksIFxuICAgIGxpbWl0cyA9IGMoMCwgMzApKSArIFxuICB0aGVtZV9idygpICsgXG4gIHRoZW1lKFxuICAgIHBhbmVsLmdyaWQubWFqb3IgPSBlbGVtZW50X2JsYW5rKCksIFxuICAgIHBhbmVsLmdyaWQubWlub3IgPSBlbGVtZW50X2JsYW5rKCksIFxuICAgIGF4aXMudGl0bGUueCA9IGVsZW1lbnRfYmxhbmsoKSwgXG4gICAgYXhpcy50ZXh0LnggPSBlbGVtZW50X2JsYW5rKClcbiAgKVxuZ3JpZC5hcnJhbmdlKGdwMSwgZ3AyLCBucm93ID0gMiwgaGVpZ2h0cyA9IGMoMSwgMSkpXG5gYGAifQ== -->
-<pre class="r"><code>gp1 &lt;- d1 %&gt;&gt;% ggplot() + 
-  geom_segment(mapping = aes(x = Date, y = Precipitation * 30 / 400, xend = Date, yend = 0), size = 11, lineend = &quot;butt&quot;, colour = gray(0.5)) +
-  geom_line(mapping = aes(x = Date, y = Temperature)) + 
-  geom_point(mapping = aes(x = Date, y = Temperature), size = 3, shape = 21, fill = &quot;white&quot;) + 
-  scale_x_date(name = &quot;Month&quot;, breaks = seq.Date(as.Date(&quot;2015-01-01&quot;), as.Date(&quot;2015-12-31&quot;), by = &quot;1 month&quot;), labels = function(date){return(month(date, label = TRUE))}) + 
-  scale_y_continuous(
-    name = expression(&quot;Temperature (&quot;~degree~&quot;C)&quot;), 
-    sec.axis = sec_axis(~ . * 400 / 30 , name = &quot;Precipitation (mm)&quot;), 
-    limits = c(0, 30)) + 
-  theme_bw() + 
-  theme(
-    panel.grid.major = element_blank(), 
-    panel.grid.minor = element_blank(), 
-    axis.title.x = element_blank(), 
-    axis.text.x = element_blank()
-  )
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZ3AxJHRoZW1lJGF4aXMudGl0bGUueCA8LSBlbGVtZW50X2JsYW5rKClcbmdwMSR0aGVtZSRheGlzLnRleHQueCA8LSBlbGVtZW50X2JsYW5rKClcbmdyaWQuYXJyYW5nZShncDEsIGdwMiwgbnJvdyA9IDIsIGhlaWdodHMgPSBjKDEsIDEpKVxuYGBgIn0= -->
+<pre class="r"><code>gp1$theme$axis.title.x &lt;- element_blank()
+gp1$theme$axis.text.x &lt;- element_blank()
 grid.arrange(gp1, gp2, nrow = 2, heights = c(1, 1))</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-plot-begin eyJjb25kaXRpb25zIjpbXSwiaGVpZ2h0Ijo0MDEuNzMwNSwic2l6ZV9iZWhhdmlvciI6MCwid2lkdGgiOjY1MH0= -->
@@ -349,37 +335,11 @@ grid.arrange(gp1, gp2, nrow = 2, heights = c(1, 1))</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZ3AxIDwtIGQxICU+PiUgZ2dwbG90KCkgKyBcbiAgZ2VvbV9zZWdtZW50KG1hcHBpbmcgPSBhZXMoeCA9IERhdGUsIHkgPSBQcmVjaXBpdGF0aW9uICogMzAgLyA0MDAsIHhlbmQgPSBEYXRlLCB5ZW5kID0gMCksIHNpemUgPSAxMSwgbGluZWVuZCA9IFwiYnV0dFwiLCBjb2xvdXIgPSBncmF5KDAuNSkpICtcbiAgZ2VvbV9saW5lKG1hcHBpbmcgPSBhZXMoeCA9IERhdGUsIHkgPSBUZW1wZXJhdHVyZSkpICsgXG4gIGdlb21fcG9pbnQobWFwcGluZyA9IGFlcyh4ID0gRGF0ZSwgeSA9IFRlbXBlcmF0dXJlKSwgc2l6ZSA9IDMsIHNoYXBlID0gMjEsIGZpbGwgPSBcIndoaXRlXCIpICsgXG4gIHNjYWxlX3hfZGF0ZShuYW1lID0gXCJNb250aFwiLCBicmVha3MgPSBzZXEuRGF0ZShhcy5EYXRlKFwiMjAxNS0wMS0wMVwiKSwgYXMuRGF0ZShcIjIwMTUtMTItMzFcIiksIGJ5ID0gXCIxIG1vbnRoXCIpLCBsYWJlbHMgPSBmdW5jdGlvbihkYXRlKXtyZXR1cm4obW9udGgoZGF0ZSwgbGFiZWwgPSBUUlVFKSl9KSArIFxuICBzY2FsZV95X2NvbnRpbnVvdXMoXG4gICAgc2VjLmF4aXMgPSBzZWNfYXhpcyh+IC4gKiA0MDAgLyAzMCksIFxuICAgIGxpbWl0cyA9IGMoMCwgMzApKSArIFxuICB0aGVtZV9idygpICsgXG4gIHRoZW1lKFxuICAgIHBhbmVsLmdyaWQubWFqb3IgPSBlbGVtZW50X2JsYW5rKCksIFxuICAgIHBhbmVsLmdyaWQubWlub3IgPSBlbGVtZW50X2JsYW5rKCksIFxuICAgIGF4aXMudGl0bGUueCA9IGVsZW1lbnRfYmxhbmsoKSwgXG4gICAgYXhpcy50ZXh0LnggPSBlbGVtZW50X2JsYW5rKCksIFxuICAgIGF4aXMudGl0bGUueSA9IGVsZW1lbnRfYmxhbmsoKSkgKyBcbiAgYW5ub3RhdGUoXCJ0ZXh0XCIsIHggPSBhcy5EYXRlKFwiMjAxNS0wMS0wMVwiKSwgeSA9IDI4LCBsYWJlbCA9IFwiTmFoYVwiLCBoanVzdCA9IDApXG5ncDIgPC0gZDIgJT4+JSBnZ3Bsb3QoKSArIFxuICBnZW9tX3NlZ21lbnQobWFwcGluZyA9IGFlcyh4ID0gRGF0ZSwgeSA9IFByZWNpcGl0YXRpb24gLyAxMCAtIDUsIHhlbmQgPSBEYXRlLCB5ZW5kID0gLTUpLCBzaXplID0gMTEsIGxpbmVlbmQgPSBcImJ1dHRcIiwgY29sb3VyID0gZ3JheSgwLjUpKSArXG4gIGdlb21fbGluZShtYXBwaW5nID0gYWVzKHggPSBEYXRlLCB5ID0gVGVtcGVyYXR1cmUpKSArXG4gIGdlb21fcG9pbnQobWFwcGluZyA9IGFlcyh4ID0gRGF0ZSwgeSA9IFRlbXBlcmF0dXJlKSwgc2l6ZSA9IDMsIHNoYXBlID0gMjEsIGZpbGwgPSBcIndoaXRlXCIpICtcbiAgc2NhbGVfeF9kYXRlKG5hbWUgPSBcIk1vbnRoXCIsIGJyZWFrcyA9IHNlcS5EYXRlKGFzLkRhdGUoXCIyMDE1LTAxLTAxXCIpLCBhcy5EYXRlKFwiMjAxNS0xMi0zMVwiKSwgYnkgPSBcIjEgbW9udGhcIiksIGxhYmVscyA9IGZ1bmN0aW9uKGRhdGUpe3JldHVybihtb250aChkYXRlLCBsYWJlbCA9IFRSVUUpKX0pICtcbiAgc2NhbGVfeV9jb250aW51b3VzKFxuICAgIHNlYy5heGlzID0gc2VjX2F4aXMofiAoLiArIDUpICogMTApLFxuICAgIGxpbWl0cyA9IGMoLTUsIDIwKSkgK1xuICB0aGVtZV9idygpICtcbiAgdGhlbWUoXG4gICAgcGFuZWwuZ3JpZC5tYWpvciA9IGVsZW1lbnRfYmxhbmsoKSxcbiAgICBwYW5lbC5ncmlkLm1pbm9yID0gZWxlbWVudF9ibGFuaygpLCBcbiAgICBheGlzLnRpdGxlLnkgPSBlbGVtZW50X2JsYW5rKCkpICsgXG4gIGFubm90YXRlKFwidGV4dFwiLCB4ID0gYXMuRGF0ZShcIjIwMTUtMDEtMDFcIiksIHkgPSAxOCwgbGFiZWwgPSBcIkt1c2hpcm9cIiwgaGp1c3QgPSAwKVxuZ3JpZC5hcnJhbmdlKHJiaW5kKGdncGxvdEdyb2IoZ3AxKSwgZ2dwbG90R3JvYihncDIpLCBzaXplID0gXCJsYXN0XCIpLCBsZWZ0ID0gdGV4dEdyb2IobGFiZWwgPSBleHByZXNzaW9uKFwiVGVtcGVyYXR1cmUgKFwifmRlZ3JlZX5cIkMpXCIpLCByb3QgPSA5MCksIHJpZ2h0ID0gXCJQcmVjaXBpdGF0aW9uIChtbSlcIilcbmBgYCJ9 -->
-<pre class="r"><code>gp1 &lt;- d1 %&gt;&gt;% ggplot() + 
-  geom_segment(mapping = aes(x = Date, y = Precipitation * 30 / 400, xend = Date, yend = 0), size = 11, lineend = &quot;butt&quot;, colour = gray(0.5)) +
-  geom_line(mapping = aes(x = Date, y = Temperature)) + 
-  geom_point(mapping = aes(x = Date, y = Temperature), size = 3, shape = 21, fill = &quot;white&quot;) + 
-  scale_x_date(name = &quot;Month&quot;, breaks = seq.Date(as.Date(&quot;2015-01-01&quot;), as.Date(&quot;2015-12-31&quot;), by = &quot;1 month&quot;), labels = function(date){return(month(date, label = TRUE))}) + 
-  scale_y_continuous(
-    sec.axis = sec_axis(~ . * 400 / 30), 
-    limits = c(0, 30)) + 
-  theme_bw() + 
-  theme(
-    panel.grid.major = element_blank(), 
-    panel.grid.minor = element_blank(), 
-    axis.title.x = element_blank(), 
-    axis.text.x = element_blank(), 
-    axis.title.y = element_blank()) + 
-  annotate(&quot;text&quot;, x = as.Date(&quot;2015-01-01&quot;), y = 28, label = &quot;Naha&quot;, hjust = 0)
-gp2 &lt;- d2 %&gt;&gt;% ggplot() + 
-  geom_segment(mapping = aes(x = Date, y = Precipitation / 10 - 5, xend = Date, yend = -5), size = 11, lineend = &quot;butt&quot;, colour = gray(0.5)) +
-  geom_line(mapping = aes(x = Date, y = Temperature)) +
-  geom_point(mapping = aes(x = Date, y = Temperature), size = 3, shape = 21, fill = &quot;white&quot;) +
-  scale_x_date(name = &quot;Month&quot;, breaks = seq.Date(as.Date(&quot;2015-01-01&quot;), as.Date(&quot;2015-12-31&quot;), by = &quot;1 month&quot;), labels = function(date){return(month(date, label = TRUE))}) +
-  scale_y_continuous(
-    sec.axis = sec_axis(~ (. + 5) * 10),
-    limits = c(-5, 20)) +
-  theme_bw() +
-  theme(
-    panel.grid.major = element_blank(),
-    panel.grid.minor = element_blank(), 
-    axis.title.y = element_blank()) + 
-  annotate(&quot;text&quot;, x = as.Date(&quot;2015-01-01&quot;), y = 18, label = &quot;Kushiro&quot;, hjust = 0)
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZ3AxJHRoZW1lJGF4aXMudGl0bGUueSA8LSBlbGVtZW50X2JsYW5rKClcbmdwMSA8LSBncDEgKyBhbm5vdGF0ZShcInRleHRcIiwgeCA9IGFzLkRhdGUoXCIyMDE1LTAxLTAxXCIpLCB5ID0gMjgsIGxhYmVsID0gXCJOYWhhXCIsIGhqdXN0ID0gMClcbmdwMiR0aGVtZSRheGlzLnRpdGxlLnkgPC0gZWxlbWVudF9ibGFuaygpXG5ncDIgPC0gZ3AyICsgYW5ub3RhdGUoXCJ0ZXh0XCIsIHggPSBhcy5EYXRlKFwiMjAxNS0wMS0wMVwiKSwgeSA9IDE4LCBsYWJlbCA9IFwiS3VzaGlyb1wiLCBoanVzdCA9IDApXG5ncmlkLmFycmFuZ2UocmJpbmQoZ2dwbG90R3JvYihncDEpLCBnZ3Bsb3RHcm9iKGdwMiksIHNpemUgPSBcImxhc3RcIiksIGxlZnQgPSB0ZXh0R3JvYihsYWJlbCA9IGV4cHJlc3Npb24oXCJUZW1wZXJhdHVyZSAoXCJ+ZGVncmVlflwiQylcIiksIHJvdCA9IDkwKSwgcmlnaHQgPSBcIlByZWNpcGl0YXRpb24gKG1tKVwiKVxuYGBgIn0= -->
+<pre class="r"><code>gp1$theme$axis.title.y &lt;- element_blank()
+gp1 &lt;- gp1 + annotate(&quot;text&quot;, x = as.Date(&quot;2015-01-01&quot;), y = 28, label = &quot;Naha&quot;, hjust = 0)
+gp2$theme$axis.title.y &lt;- element_blank()
+gp2 &lt;- gp2 + annotate(&quot;text&quot;, x = as.Date(&quot;2015-01-01&quot;), y = 18, label = &quot;Kushiro&quot;, hjust = 0)
 grid.arrange(rbind(ggplotGrob(gp1), ggplotGrob(gp2), size = &quot;last&quot;), left = textGrob(label = expression(&quot;Temperature (&quot;~degree~&quot;C)&quot;), rot = 90), right = &quot;Precipitation (mm)&quot;)</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-plot-begin eyJjb25kaXRpb25zIjpbXSwiaGVpZ2h0Ijo0MDEuNzMwNSwic2l6ZV9iZWhhdmlvciI6MCwid2lkdGgiOjY1MH0= -->
@@ -403,43 +363,43 @@ grid.arrange(rbind(ggplotGrob(gp1), ggplotGrob(gp2), size = &quot;last&quot;), l
 <pre class="r"><code>gp12 &lt;- rbind(ggplotGrob(gp1), ggplotGrob(gp2), size = &quot;last&quot;)
 gp12</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiVGFibGVHcm9iICgyMCB4IDcpIFwibGF5b3V0XCI6IDM0IGdyb2JzXG4gICAgeiAgICAgICAgIGNlbGxzICAgICAgIG5hbWUgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGdyb2JcbjEgICAwICggMS0xMCwgMS0gNykgYmFja2dyb3VuZCAgICAgICAgcmVjdFtwbG90LmJhY2tncm91bmQuLnJlY3QuOTYwXVxuMiAgIDUgKCA1LSA1LCAzLSAzKSAgICAgc3BhY2VyICAgICAgICAgICAgICAgICAgICAgICAgIHplcm9Hcm9iW05VTExdXG4zICAgNyAoIDYtIDYsIDMtIDMpICAgICBheGlzLWwgICAgYWJzb2x1dGVHcm9iW0dSSUQuYWJzb2x1dGVHcm9iLjk0OF1cbjQgICAzICggNy0gNywgMy0gMykgICAgIHNwYWNlciAgICAgICAgICAgICAgICAgICAgICAgICB6ZXJvR3JvYltOVUxMXVxuNSAgIDYgKCA1LSA1LCA0LSA0KSAgICAgYXhpcy10ICAgICAgICAgICAgICAgICAgICAgICAgIHplcm9Hcm9iW05VTExdXG42ICAgMSAoIDYtIDYsIDQtIDQpICAgICAgcGFuZWwgICAgICAgICAgICAgICBnVHJlZVtwYW5lbC0xLmdUcmVlLjkzNF1cbjcgICA5ICggNy0gNywgNC0gNCkgICAgIGF4aXMtYiAgICBhYnNvbHV0ZUdyb2JbR1JJRC5hYnNvbHV0ZUdyb2IuOTQxXVxuOCAgIDQgKCA1LSA1LCA1LSA1KSAgICAgc3BhY2VyICAgICAgICAgICAgICAgICAgICAgICAgIHplcm9Hcm9iW05VTExdXG45ICAgOCAoIDYtIDYsIDUtIDUpICAgICBheGlzLXIgICAgYWJzb2x1dGVHcm9iW0dSSUQuYWJzb2x1dGVHcm9iLjk1NV1cbjEwICAyICggNy0gNywgNS0gNSkgICAgIHNwYWNlciAgICAgICAgICAgICAgICAgICAgICAgICB6ZXJvR3JvYltOVUxMXVxuMTEgMTAgKCA0LSA0LCA0LSA0KSAgICAgeGxhYi10ICAgICAgICAgICAgICAgICAgICAgICAgIHplcm9Hcm9iW05VTExdXG4xMiAxMSAoIDgtIDgsIDQtIDQpICAgICB4bGFiLWIgICB6ZXJvR3JvYltheGlzLnRpdGxlLnguLnplcm9Hcm9iLjkzNV1cbjEzIDEyICggNi0gNiwgMi0gMikgICAgIHlsYWItbCAgIHplcm9Hcm9iW2F4aXMudGl0bGUueS4uemVyb0dyb2IuOTM2XVxuMTQgMTMgKCA2LSA2LCA2LSA2KSAgICAgeWxhYi1yICAgICAgICAgICAgICAgICAgICAgICAgIHplcm9Hcm9iW05VTExdXG4xNSAxNCAoIDMtIDMsIDQtIDQpICAgc3VidGl0bGUgIHplcm9Hcm9iW3Bsb3Quc3VidGl0bGUuLnplcm9Hcm9iLjk1N11cbjE2IDE1ICggMi0gMiwgNC0gNCkgICAgICB0aXRsZSAgICAgemVyb0dyb2JbcGxvdC50aXRsZS4uemVyb0dyb2IuOTU2XVxuMTcgMTYgKCA5LSA5LCA0LSA0KSAgICBjYXB0aW9uICAgemVyb0dyb2JbcGxvdC5jYXB0aW9uLi56ZXJvR3JvYi45NThdXG4xOCAgMCAoMTEtMjAsIDEtIDcpIGJhY2tncm91bmQgICAgICAgcmVjdFtwbG90LmJhY2tncm91bmQuLnJlY3QuMTAwN11cbjE5ICA1ICgxNS0xNSwgMy0gMykgICAgIHNwYWNlciAgICAgICAgICAgICAgICAgICAgICAgICB6ZXJvR3JvYltOVUxMXVxuMjAgIDcgKDE2LTE2LCAzLSAzKSAgICAgYXhpcy1sICAgIGFic29sdXRlR3JvYltHUklELmFic29sdXRlR3JvYi45OTVdXG4yMSAgMyAoMTctMTcsIDMtIDMpICAgICBzcGFjZXIgICAgICAgICAgICAgICAgICAgICAgICAgemVyb0dyb2JbTlVMTF1cbjIyICA2ICgxNS0xNSwgNC0gNCkgICAgIGF4aXMtdCAgICAgICAgICAgICAgICAgICAgICAgICB6ZXJvR3JvYltOVUxMXVxuMjMgIDEgKDE2LTE2LCA0LSA0KSAgICAgIHBhbmVsICAgICAgICAgICAgICAgZ1RyZWVbcGFuZWwtMS5nVHJlZS45NzddXG4yNCAgOSAoMTctMTcsIDQtIDQpICAgICBheGlzLWIgICAgYWJzb2x1dGVHcm9iW0dSSUQuYWJzb2x1dGVHcm9iLjk4OF1cbjI1ICA0ICgxNS0xNSwgNS0gNSkgICAgIHNwYWNlciAgICAgICAgICAgICAgICAgICAgICAgICB6ZXJvR3JvYltOVUxMXVxuMjYgIDggKDE2LTE2LCA1LSA1KSAgICAgYXhpcy1yICAgYWJzb2x1dGVHcm9iW0dSSUQuYWJzb2x1dGVHcm9iLjEwMDJdXG4yNyAgMiAoMTctMTcsIDUtIDUpICAgICBzcGFjZXIgICAgICAgICAgICAgICAgICAgICAgICAgemVyb0dyb2JbTlVMTF1cbjI4IDEwICgxNC0xNCwgNC0gNCkgICAgIHhsYWItdCAgICAgICAgICAgICAgICAgICAgICAgICB6ZXJvR3JvYltOVUxMXVxuMjkgMTEgKDE4LTE4LCA0LSA0KSAgICAgeGxhYi1iIHRpdGxlR3JvYltheGlzLnRpdGxlLnguLnRpdGxlR3JvYi45ODBdXG4zMCAxMiAoMTYtMTYsIDItIDIpICAgICB5bGFiLWwgICB6ZXJvR3JvYltheGlzLnRpdGxlLnkuLnplcm9Hcm9iLjk4MV1cbjMxIDEzICgxNi0xNiwgNi0gNikgICAgIHlsYWItciAgICAgICAgICAgICAgICAgICAgICAgICB6ZXJvR3JvYltOVUxMXVxuMzIgMTQgKDEzLTEzLCA0LSA0KSAgIHN1YnRpdGxlIHplcm9Hcm9iW3Bsb3Quc3VidGl0bGUuLnplcm9Hcm9iLjEwMDRdXG4zMyAxNSAoMTItMTIsIDQtIDQpICAgICAgdGl0bGUgICAgemVyb0dyb2JbcGxvdC50aXRsZS4uemVyb0dyb2IuMTAwM11cbjM0IDE2ICgxOS0xOSwgNC0gNCkgICAgY2FwdGlvbiAgemVyb0dyb2JbcGxvdC5jYXB0aW9uLi56ZXJvR3JvYi4xMDA1XVxuIn0= -->
+<!-- rnb-output-begin eyJkYXRhIjoiVGFibGVHcm9iICgyMCB4IDcpIFwibGF5b3V0XCI6IDM0IGdyb2JzXG4gICAgeiAgICAgICAgIGNlbGxzICAgICAgIG5hbWUgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBncm9iXG4xICAgMCAoIDEtMTAsIDEtIDcpIGJhY2tncm91bmQgICAgICAgICAgICByZWN0W3Bsb3QuYmFja2dyb3VuZC4ucmVjdC41MzhdXG4yICAgNSAoIDUtIDUsIDMtIDMpICAgICBzcGFjZXIgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHplcm9Hcm9iW05VTExdXG4zICAgNyAoIDYtIDYsIDMtIDMpICAgICBheGlzLWwgICAgICAgIGFic29sdXRlR3JvYltHUklELmFic29sdXRlR3JvYi41MjZdXG40ICAgMyAoIDctIDcsIDMtIDMpICAgICBzcGFjZXIgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHplcm9Hcm9iW05VTExdXG41ICAgNiAoIDUtIDUsIDQtIDQpICAgICBheGlzLXQgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHplcm9Hcm9iW05VTExdXG42ICAgMSAoIDYtIDYsIDQtIDQpICAgICAgcGFuZWwgICAgICAgICAgICAgICAgICAgZ1RyZWVbcGFuZWwtMS5nVHJlZS41MTFdXG43ICAgOSAoIDctIDcsIDQtIDQpICAgICBheGlzLWIgICAgICAgIGFic29sdXRlR3JvYltHUklELmFic29sdXRlR3JvYi41MTldXG44ICAgNCAoIDUtIDUsIDUtIDUpICAgICBzcGFjZXIgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHplcm9Hcm9iW05VTExdXG45ICAgOCAoIDYtIDYsIDUtIDUpICAgICBheGlzLXIgICAgICAgIGFic29sdXRlR3JvYltHUklELmFic29sdXRlR3JvYi41MzNdXG4xMCAgMiAoIDctIDcsIDUtIDUpICAgICBzcGFjZXIgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHplcm9Hcm9iW05VTExdXG4xMSAxMCAoIDQtIDQsIDQtIDQpICAgICB4bGFiLXQgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHplcm9Hcm9iW05VTExdXG4xMiAxMSAoIDgtIDgsIDQtIDQpICAgICB4bGFiLWIgICAgICAgemVyb0dyb2JbYXhpcy50aXRsZS54Li56ZXJvR3JvYi41MTJdXG4xMyAxMiAoIDYtIDYsIDItIDIpICAgICB5bGFiLWwgICAgICAgemVyb0dyb2JbYXhpcy50aXRsZS55Li56ZXJvR3JvYi41MTNdXG4xNCAxMyAoIDYtIDYsIDYtIDYpICAgICB5bGFiLXIgemVyb0dyb2JbYXhpcy50aXRsZS55LnJpZ2h0Li56ZXJvR3JvYi41MTRdXG4xNSAxNCAoIDMtIDMsIDQtIDQpICAgc3VidGl0bGUgICAgICB6ZXJvR3JvYltwbG90LnN1YnRpdGxlLi56ZXJvR3JvYi41MzVdXG4xNiAxNSAoIDItIDIsIDQtIDQpICAgICAgdGl0bGUgICAgICAgICB6ZXJvR3JvYltwbG90LnRpdGxlLi56ZXJvR3JvYi41MzRdXG4xNyAxNiAoIDktIDksIDQtIDQpICAgIGNhcHRpb24gICAgICAgemVyb0dyb2JbcGxvdC5jYXB0aW9uLi56ZXJvR3JvYi41MzZdXG4xOCAgMCAoMTEtMjAsIDEtIDcpIGJhY2tncm91bmQgICAgICAgICAgICByZWN0W3Bsb3QuYmFja2dyb3VuZC4ucmVjdC41ODZdXG4xOSAgNSAoMTUtMTUsIDMtIDMpICAgICBzcGFjZXIgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHplcm9Hcm9iW05VTExdXG4yMCAgNyAoMTYtMTYsIDMtIDMpICAgICBheGlzLWwgICAgICAgIGFic29sdXRlR3JvYltHUklELmFic29sdXRlR3JvYi41NzRdXG4yMSAgMyAoMTctMTcsIDMtIDMpICAgICBzcGFjZXIgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHplcm9Hcm9iW05VTExdXG4yMiAgNiAoMTUtMTUsIDQtIDQpICAgICBheGlzLXQgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHplcm9Hcm9iW05VTExdXG4yMyAgMSAoMTYtMTYsIDQtIDQpICAgICAgcGFuZWwgICAgICAgICAgICAgICAgICAgZ1RyZWVbcGFuZWwtMS5nVHJlZS41NTVdXG4yNCAgOSAoMTctMTcsIDQtIDQpICAgICBheGlzLWIgICAgICAgIGFic29sdXRlR3JvYltHUklELmFic29sdXRlR3JvYi41NjddXG4yNSAgNCAoMTUtMTUsIDUtIDUpICAgICBzcGFjZXIgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHplcm9Hcm9iW05VTExdXG4yNiAgOCAoMTYtMTYsIDUtIDUpICAgICBheGlzLXIgICAgICAgIGFic29sdXRlR3JvYltHUklELmFic29sdXRlR3JvYi41ODFdXG4yNyAgMiAoMTctMTcsIDUtIDUpICAgICBzcGFjZXIgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHplcm9Hcm9iW05VTExdXG4yOCAxMCAoMTQtMTQsIDQtIDQpICAgICB4bGFiLXQgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHplcm9Hcm9iW05VTExdXG4yOSAxMSAoMTgtMTgsIDQtIDQpICAgICB4bGFiLWIgICAgIHRpdGxlR3JvYltheGlzLnRpdGxlLnguLnRpdGxlR3JvYi41NThdXG4zMCAxMiAoMTYtMTYsIDItIDIpICAgICB5bGFiLWwgICAgICAgemVyb0dyb2JbYXhpcy50aXRsZS55Li56ZXJvR3JvYi41NTldXG4zMSAxMyAoMTYtMTYsIDYtIDYpICAgICB5bGFiLXIgemVyb0dyb2JbYXhpcy50aXRsZS55LnJpZ2h0Li56ZXJvR3JvYi41NjBdXG4zMiAxNCAoMTMtMTMsIDQtIDQpICAgc3VidGl0bGUgICAgICB6ZXJvR3JvYltwbG90LnN1YnRpdGxlLi56ZXJvR3JvYi41ODNdXG4zMyAxNSAoMTItMTIsIDQtIDQpICAgICAgdGl0bGUgICAgICAgICB6ZXJvR3JvYltwbG90LnRpdGxlLi56ZXJvR3JvYi41ODJdXG4zNCAxNiAoMTktMTksIDQtIDQpICAgIGNhcHRpb24gICAgICAgemVyb0dyb2JbcGxvdC5jYXB0aW9uLi56ZXJvR3JvYi41ODRdXG4ifQ== -->
 <pre><code>TableGrob (20 x 7) &quot;layout&quot;: 34 grobs
-    z         cells       name                                   grob
-1   0 ( 1-10, 1- 7) background        rect[plot.background..rect.960]
-2   5 ( 5- 5, 3- 3)     spacer                         zeroGrob[NULL]
-3   7 ( 6- 6, 3- 3)     axis-l    absoluteGrob[GRID.absoluteGrob.948]
-4   3 ( 7- 7, 3- 3)     spacer                         zeroGrob[NULL]
-5   6 ( 5- 5, 4- 4)     axis-t                         zeroGrob[NULL]
-6   1 ( 6- 6, 4- 4)      panel               gTree[panel-1.gTree.934]
-7   9 ( 7- 7, 4- 4)     axis-b    absoluteGrob[GRID.absoluteGrob.941]
-8   4 ( 5- 5, 5- 5)     spacer                         zeroGrob[NULL]
-9   8 ( 6- 6, 5- 5)     axis-r    absoluteGrob[GRID.absoluteGrob.955]
-10  2 ( 7- 7, 5- 5)     spacer                         zeroGrob[NULL]
-11 10 ( 4- 4, 4- 4)     xlab-t                         zeroGrob[NULL]
-12 11 ( 8- 8, 4- 4)     xlab-b   zeroGrob[axis.title.x..zeroGrob.935]
-13 12 ( 6- 6, 2- 2)     ylab-l   zeroGrob[axis.title.y..zeroGrob.936]
-14 13 ( 6- 6, 6- 6)     ylab-r                         zeroGrob[NULL]
-15 14 ( 3- 3, 4- 4)   subtitle  zeroGrob[plot.subtitle..zeroGrob.957]
-16 15 ( 2- 2, 4- 4)      title     zeroGrob[plot.title..zeroGrob.956]
-17 16 ( 9- 9, 4- 4)    caption   zeroGrob[plot.caption..zeroGrob.958]
-18  0 (11-20, 1- 7) background       rect[plot.background..rect.1007]
-19  5 (15-15, 3- 3)     spacer                         zeroGrob[NULL]
-20  7 (16-16, 3- 3)     axis-l    absoluteGrob[GRID.absoluteGrob.995]
-21  3 (17-17, 3- 3)     spacer                         zeroGrob[NULL]
-22  6 (15-15, 4- 4)     axis-t                         zeroGrob[NULL]
-23  1 (16-16, 4- 4)      panel               gTree[panel-1.gTree.977]
-24  9 (17-17, 4- 4)     axis-b    absoluteGrob[GRID.absoluteGrob.988]
-25  4 (15-15, 5- 5)     spacer                         zeroGrob[NULL]
-26  8 (16-16, 5- 5)     axis-r   absoluteGrob[GRID.absoluteGrob.1002]
-27  2 (17-17, 5- 5)     spacer                         zeroGrob[NULL]
-28 10 (14-14, 4- 4)     xlab-t                         zeroGrob[NULL]
-29 11 (18-18, 4- 4)     xlab-b titleGrob[axis.title.x..titleGrob.980]
-30 12 (16-16, 2- 2)     ylab-l   zeroGrob[axis.title.y..zeroGrob.981]
-31 13 (16-16, 6- 6)     ylab-r                         zeroGrob[NULL]
-32 14 (13-13, 4- 4)   subtitle zeroGrob[plot.subtitle..zeroGrob.1004]
-33 15 (12-12, 4- 4)      title    zeroGrob[plot.title..zeroGrob.1003]
-34 16 (19-19, 4- 4)    caption  zeroGrob[plot.caption..zeroGrob.1005]</code></pre>
+    z         cells       name                                       grob
+1   0 ( 1-10, 1- 7) background            rect[plot.background..rect.538]
+2   5 ( 5- 5, 3- 3)     spacer                             zeroGrob[NULL]
+3   7 ( 6- 6, 3- 3)     axis-l        absoluteGrob[GRID.absoluteGrob.526]
+4   3 ( 7- 7, 3- 3)     spacer                             zeroGrob[NULL]
+5   6 ( 5- 5, 4- 4)     axis-t                             zeroGrob[NULL]
+6   1 ( 6- 6, 4- 4)      panel                   gTree[panel-1.gTree.511]
+7   9 ( 7- 7, 4- 4)     axis-b        absoluteGrob[GRID.absoluteGrob.519]
+8   4 ( 5- 5, 5- 5)     spacer                             zeroGrob[NULL]
+9   8 ( 6- 6, 5- 5)     axis-r        absoluteGrob[GRID.absoluteGrob.533]
+10  2 ( 7- 7, 5- 5)     spacer                             zeroGrob[NULL]
+11 10 ( 4- 4, 4- 4)     xlab-t                             zeroGrob[NULL]
+12 11 ( 8- 8, 4- 4)     xlab-b       zeroGrob[axis.title.x..zeroGrob.512]
+13 12 ( 6- 6, 2- 2)     ylab-l       zeroGrob[axis.title.y..zeroGrob.513]
+14 13 ( 6- 6, 6- 6)     ylab-r zeroGrob[axis.title.y.right..zeroGrob.514]
+15 14 ( 3- 3, 4- 4)   subtitle      zeroGrob[plot.subtitle..zeroGrob.535]
+16 15 ( 2- 2, 4- 4)      title         zeroGrob[plot.title..zeroGrob.534]
+17 16 ( 9- 9, 4- 4)    caption       zeroGrob[plot.caption..zeroGrob.536]
+18  0 (11-20, 1- 7) background            rect[plot.background..rect.586]
+19  5 (15-15, 3- 3)     spacer                             zeroGrob[NULL]
+20  7 (16-16, 3- 3)     axis-l        absoluteGrob[GRID.absoluteGrob.574]
+21  3 (17-17, 3- 3)     spacer                             zeroGrob[NULL]
+22  6 (15-15, 4- 4)     axis-t                             zeroGrob[NULL]
+23  1 (16-16, 4- 4)      panel                   gTree[panel-1.gTree.555]
+24  9 (17-17, 4- 4)     axis-b        absoluteGrob[GRID.absoluteGrob.567]
+25  4 (15-15, 5- 5)     spacer                             zeroGrob[NULL]
+26  8 (16-16, 5- 5)     axis-r        absoluteGrob[GRID.absoluteGrob.581]
+27  2 (17-17, 5- 5)     spacer                             zeroGrob[NULL]
+28 10 (14-14, 4- 4)     xlab-t                             zeroGrob[NULL]
+29 11 (18-18, 4- 4)     xlab-b     titleGrob[axis.title.x..titleGrob.558]
+30 12 (16-16, 2- 2)     ylab-l       zeroGrob[axis.title.y..zeroGrob.559]
+31 13 (16-16, 6- 6)     ylab-r zeroGrob[axis.title.y.right..zeroGrob.560]
+32 14 (13-13, 4- 4)   subtitle      zeroGrob[plot.subtitle..zeroGrob.583]
+33 15 (12-12, 4- 4)      title         zeroGrob[plot.title..zeroGrob.582]
+34 16 (19-19, 4- 4)    caption       zeroGrob[plot.caption..zeroGrob.584]</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
@@ -456,44 +416,44 @@ gp12</code></pre>
 <pre class="r"><code>gt &lt;- gtable_add_grob(gp12, segmentsGrob(x0 = 0.455, x1 = 0.455, y0 = 0.1, y1 = 0.98, gp=gpar(lty=&quot;dashed&quot;)), t = 1, l = 1, b = 20, r = 7, z = 1)
 gt</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiVGFibGVHcm9iICgyMCB4IDcpIFwibGF5b3V0XCI6IDM1IGdyb2JzXG4gICAgeiAgICAgICAgIGNlbGxzICAgICAgIG5hbWUgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGdyb2JcbjEgICAwICggMS0xMCwgMS0gNykgYmFja2dyb3VuZCAgICAgICAgcmVjdFtwbG90LmJhY2tncm91bmQuLnJlY3QuOTYwXVxuMiAgIDUgKCA1LSA1LCAzLSAzKSAgICAgc3BhY2VyICAgICAgICAgICAgICAgICAgICAgICAgIHplcm9Hcm9iW05VTExdXG4zICAgNyAoIDYtIDYsIDMtIDMpICAgICBheGlzLWwgICAgYWJzb2x1dGVHcm9iW0dSSUQuYWJzb2x1dGVHcm9iLjk0OF1cbjQgICAzICggNy0gNywgMy0gMykgICAgIHNwYWNlciAgICAgICAgICAgICAgICAgICAgICAgICB6ZXJvR3JvYltOVUxMXVxuNSAgIDYgKCA1LSA1LCA0LSA0KSAgICAgYXhpcy10ICAgICAgICAgICAgICAgICAgICAgICAgIHplcm9Hcm9iW05VTExdXG42ICAgMSAoIDYtIDYsIDQtIDQpICAgICAgcGFuZWwgICAgICAgICAgICAgICBnVHJlZVtwYW5lbC0xLmdUcmVlLjkzNF1cbjcgICA5ICggNy0gNywgNC0gNCkgICAgIGF4aXMtYiAgICBhYnNvbHV0ZUdyb2JbR1JJRC5hYnNvbHV0ZUdyb2IuOTQxXVxuOCAgIDQgKCA1LSA1LCA1LSA1KSAgICAgc3BhY2VyICAgICAgICAgICAgICAgICAgICAgICAgIHplcm9Hcm9iW05VTExdXG45ICAgOCAoIDYtIDYsIDUtIDUpICAgICBheGlzLXIgICAgYWJzb2x1dGVHcm9iW0dSSUQuYWJzb2x1dGVHcm9iLjk1NV1cbjEwICAyICggNy0gNywgNS0gNSkgICAgIHNwYWNlciAgICAgICAgICAgICAgICAgICAgICAgICB6ZXJvR3JvYltOVUxMXVxuMTEgMTAgKCA0LSA0LCA0LSA0KSAgICAgeGxhYi10ICAgICAgICAgICAgICAgICAgICAgICAgIHplcm9Hcm9iW05VTExdXG4xMiAxMSAoIDgtIDgsIDQtIDQpICAgICB4bGFiLWIgICB6ZXJvR3JvYltheGlzLnRpdGxlLnguLnplcm9Hcm9iLjkzNV1cbjEzIDEyICggNi0gNiwgMi0gMikgICAgIHlsYWItbCAgIHplcm9Hcm9iW2F4aXMudGl0bGUueS4uemVyb0dyb2IuOTM2XVxuMTQgMTMgKCA2LSA2LCA2LSA2KSAgICAgeWxhYi1yICAgICAgICAgICAgICAgICAgICAgICAgIHplcm9Hcm9iW05VTExdXG4xNSAxNCAoIDMtIDMsIDQtIDQpICAgc3VidGl0bGUgIHplcm9Hcm9iW3Bsb3Quc3VidGl0bGUuLnplcm9Hcm9iLjk1N11cbjE2IDE1ICggMi0gMiwgNC0gNCkgICAgICB0aXRsZSAgICAgemVyb0dyb2JbcGxvdC50aXRsZS4uemVyb0dyb2IuOTU2XVxuMTcgMTYgKCA5LSA5LCA0LSA0KSAgICBjYXB0aW9uICAgemVyb0dyb2JbcGxvdC5jYXB0aW9uLi56ZXJvR3JvYi45NThdXG4xOCAgMCAoMTEtMjAsIDEtIDcpIGJhY2tncm91bmQgICAgICAgcmVjdFtwbG90LmJhY2tncm91bmQuLnJlY3QuMTAwN11cbjE5ICA1ICgxNS0xNSwgMy0gMykgICAgIHNwYWNlciAgICAgICAgICAgICAgICAgICAgICAgICB6ZXJvR3JvYltOVUxMXVxuMjAgIDcgKDE2LTE2LCAzLSAzKSAgICAgYXhpcy1sICAgIGFic29sdXRlR3JvYltHUklELmFic29sdXRlR3JvYi45OTVdXG4yMSAgMyAoMTctMTcsIDMtIDMpICAgICBzcGFjZXIgICAgICAgICAgICAgICAgICAgICAgICAgemVyb0dyb2JbTlVMTF1cbjIyICA2ICgxNS0xNSwgNC0gNCkgICAgIGF4aXMtdCAgICAgICAgICAgICAgICAgICAgICAgICB6ZXJvR3JvYltOVUxMXVxuMjMgIDEgKDE2LTE2LCA0LSA0KSAgICAgIHBhbmVsICAgICAgICAgICAgICAgZ1RyZWVbcGFuZWwtMS5nVHJlZS45NzddXG4yNCAgOSAoMTctMTcsIDQtIDQpICAgICBheGlzLWIgICAgYWJzb2x1dGVHcm9iW0dSSUQuYWJzb2x1dGVHcm9iLjk4OF1cbjI1ICA0ICgxNS0xNSwgNS0gNSkgICAgIHNwYWNlciAgICAgICAgICAgICAgICAgICAgICAgICB6ZXJvR3JvYltOVUxMXVxuMjYgIDggKDE2LTE2LCA1LSA1KSAgICAgYXhpcy1yICAgYWJzb2x1dGVHcm9iW0dSSUQuYWJzb2x1dGVHcm9iLjEwMDJdXG4yNyAgMiAoMTctMTcsIDUtIDUpICAgICBzcGFjZXIgICAgICAgICAgICAgICAgICAgICAgICAgemVyb0dyb2JbTlVMTF1cbjI4IDEwICgxNC0xNCwgNC0gNCkgICAgIHhsYWItdCAgICAgICAgICAgICAgICAgICAgICAgICB6ZXJvR3JvYltOVUxMXVxuMjkgMTEgKDE4LTE4LCA0LSA0KSAgICAgeGxhYi1iIHRpdGxlR3JvYltheGlzLnRpdGxlLnguLnRpdGxlR3JvYi45ODBdXG4zMCAxMiAoMTYtMTYsIDItIDIpICAgICB5bGFiLWwgICB6ZXJvR3JvYltheGlzLnRpdGxlLnkuLnplcm9Hcm9iLjk4MV1cbjMxIDEzICgxNi0xNiwgNi0gNikgICAgIHlsYWItciAgICAgICAgICAgICAgICAgICAgICAgICB6ZXJvR3JvYltOVUxMXVxuMzIgMTQgKDEzLTEzLCA0LSA0KSAgIHN1YnRpdGxlIHplcm9Hcm9iW3Bsb3Quc3VidGl0bGUuLnplcm9Hcm9iLjEwMDRdXG4zMyAxNSAoMTItMTIsIDQtIDQpICAgICAgdGl0bGUgICAgemVyb0dyb2JbcGxvdC50aXRsZS4uemVyb0dyb2IuMTAwM11cbjM0IDE2ICgxOS0xOSwgNC0gNCkgICAgY2FwdGlvbiAgemVyb0dyb2JbcGxvdC5jYXB0aW9uLi56ZXJvR3JvYi4xMDA1XVxuMzUgIDEgKCAxLTIwLCAxLSA3KSAgICAgbGF5b3V0ICAgICAgICAgICBzZWdtZW50c1tHUklELnNlZ21lbnRzLjEwMDhdXG4ifQ== -->
+<!-- rnb-output-begin eyJkYXRhIjoiVGFibGVHcm9iICgyMCB4IDcpIFwibGF5b3V0XCI6IDM1IGdyb2JzXG4gICAgeiAgICAgICAgIGNlbGxzICAgICAgIG5hbWUgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBncm9iXG4xICAgMCAoIDEtMTAsIDEtIDcpIGJhY2tncm91bmQgICAgICAgICAgICByZWN0W3Bsb3QuYmFja2dyb3VuZC4ucmVjdC41MzhdXG4yICAgNSAoIDUtIDUsIDMtIDMpICAgICBzcGFjZXIgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHplcm9Hcm9iW05VTExdXG4zICAgNyAoIDYtIDYsIDMtIDMpICAgICBheGlzLWwgICAgICAgIGFic29sdXRlR3JvYltHUklELmFic29sdXRlR3JvYi41MjZdXG40ICAgMyAoIDctIDcsIDMtIDMpICAgICBzcGFjZXIgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHplcm9Hcm9iW05VTExdXG41ICAgNiAoIDUtIDUsIDQtIDQpICAgICBheGlzLXQgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHplcm9Hcm9iW05VTExdXG42ICAgMSAoIDYtIDYsIDQtIDQpICAgICAgcGFuZWwgICAgICAgICAgICAgICAgICAgZ1RyZWVbcGFuZWwtMS5nVHJlZS41MTFdXG43ICAgOSAoIDctIDcsIDQtIDQpICAgICBheGlzLWIgICAgICAgIGFic29sdXRlR3JvYltHUklELmFic29sdXRlR3JvYi41MTldXG44ICAgNCAoIDUtIDUsIDUtIDUpICAgICBzcGFjZXIgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHplcm9Hcm9iW05VTExdXG45ICAgOCAoIDYtIDYsIDUtIDUpICAgICBheGlzLXIgICAgICAgIGFic29sdXRlR3JvYltHUklELmFic29sdXRlR3JvYi41MzNdXG4xMCAgMiAoIDctIDcsIDUtIDUpICAgICBzcGFjZXIgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHplcm9Hcm9iW05VTExdXG4xMSAxMCAoIDQtIDQsIDQtIDQpICAgICB4bGFiLXQgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHplcm9Hcm9iW05VTExdXG4xMiAxMSAoIDgtIDgsIDQtIDQpICAgICB4bGFiLWIgICAgICAgemVyb0dyb2JbYXhpcy50aXRsZS54Li56ZXJvR3JvYi41MTJdXG4xMyAxMiAoIDYtIDYsIDItIDIpICAgICB5bGFiLWwgICAgICAgemVyb0dyb2JbYXhpcy50aXRsZS55Li56ZXJvR3JvYi41MTNdXG4xNCAxMyAoIDYtIDYsIDYtIDYpICAgICB5bGFiLXIgemVyb0dyb2JbYXhpcy50aXRsZS55LnJpZ2h0Li56ZXJvR3JvYi41MTRdXG4xNSAxNCAoIDMtIDMsIDQtIDQpICAgc3VidGl0bGUgICAgICB6ZXJvR3JvYltwbG90LnN1YnRpdGxlLi56ZXJvR3JvYi41MzVdXG4xNiAxNSAoIDItIDIsIDQtIDQpICAgICAgdGl0bGUgICAgICAgICB6ZXJvR3JvYltwbG90LnRpdGxlLi56ZXJvR3JvYi41MzRdXG4xNyAxNiAoIDktIDksIDQtIDQpICAgIGNhcHRpb24gICAgICAgemVyb0dyb2JbcGxvdC5jYXB0aW9uLi56ZXJvR3JvYi41MzZdXG4xOCAgMCAoMTEtMjAsIDEtIDcpIGJhY2tncm91bmQgICAgICAgICAgICByZWN0W3Bsb3QuYmFja2dyb3VuZC4ucmVjdC41ODZdXG4xOSAgNSAoMTUtMTUsIDMtIDMpICAgICBzcGFjZXIgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHplcm9Hcm9iW05VTExdXG4yMCAgNyAoMTYtMTYsIDMtIDMpICAgICBheGlzLWwgICAgICAgIGFic29sdXRlR3JvYltHUklELmFic29sdXRlR3JvYi41NzRdXG4yMSAgMyAoMTctMTcsIDMtIDMpICAgICBzcGFjZXIgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHplcm9Hcm9iW05VTExdXG4yMiAgNiAoMTUtMTUsIDQtIDQpICAgICBheGlzLXQgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHplcm9Hcm9iW05VTExdXG4yMyAgMSAoMTYtMTYsIDQtIDQpICAgICAgcGFuZWwgICAgICAgICAgICAgICAgICAgZ1RyZWVbcGFuZWwtMS5nVHJlZS41NTVdXG4yNCAgOSAoMTctMTcsIDQtIDQpICAgICBheGlzLWIgICAgICAgIGFic29sdXRlR3JvYltHUklELmFic29sdXRlR3JvYi41NjddXG4yNSAgNCAoMTUtMTUsIDUtIDUpICAgICBzcGFjZXIgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHplcm9Hcm9iW05VTExdXG4yNiAgOCAoMTYtMTYsIDUtIDUpICAgICBheGlzLXIgICAgICAgIGFic29sdXRlR3JvYltHUklELmFic29sdXRlR3JvYi41ODFdXG4yNyAgMiAoMTctMTcsIDUtIDUpICAgICBzcGFjZXIgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHplcm9Hcm9iW05VTExdXG4yOCAxMCAoMTQtMTQsIDQtIDQpICAgICB4bGFiLXQgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHplcm9Hcm9iW05VTExdXG4yOSAxMSAoMTgtMTgsIDQtIDQpICAgICB4bGFiLWIgICAgIHRpdGxlR3JvYltheGlzLnRpdGxlLnguLnRpdGxlR3JvYi41NThdXG4zMCAxMiAoMTYtMTYsIDItIDIpICAgICB5bGFiLWwgICAgICAgemVyb0dyb2JbYXhpcy50aXRsZS55Li56ZXJvR3JvYi41NTldXG4zMSAxMyAoMTYtMTYsIDYtIDYpICAgICB5bGFiLXIgemVyb0dyb2JbYXhpcy50aXRsZS55LnJpZ2h0Li56ZXJvR3JvYi41NjBdXG4zMiAxNCAoMTMtMTMsIDQtIDQpICAgc3VidGl0bGUgICAgICB6ZXJvR3JvYltwbG90LnN1YnRpdGxlLi56ZXJvR3JvYi41ODNdXG4zMyAxNSAoMTItMTIsIDQtIDQpICAgICAgdGl0bGUgICAgICAgICB6ZXJvR3JvYltwbG90LnRpdGxlLi56ZXJvR3JvYi41ODJdXG4zNCAxNiAoMTktMTksIDQtIDQpICAgIGNhcHRpb24gICAgICAgemVyb0dyb2JbcGxvdC5jYXB0aW9uLi56ZXJvR3JvYi41ODRdXG4zNSAgMSAoIDEtMjAsIDEtIDcpICAgICBsYXlvdXQgICAgICAgICAgICAgICAgc2VnbWVudHNbR1JJRC5zZWdtZW50cy41ODddXG4ifQ== -->
 <pre><code>TableGrob (20 x 7) &quot;layout&quot;: 35 grobs
-    z         cells       name                                   grob
-1   0 ( 1-10, 1- 7) background        rect[plot.background..rect.960]
-2   5 ( 5- 5, 3- 3)     spacer                         zeroGrob[NULL]
-3   7 ( 6- 6, 3- 3)     axis-l    absoluteGrob[GRID.absoluteGrob.948]
-4   3 ( 7- 7, 3- 3)     spacer                         zeroGrob[NULL]
-5   6 ( 5- 5, 4- 4)     axis-t                         zeroGrob[NULL]
-6   1 ( 6- 6, 4- 4)      panel               gTree[panel-1.gTree.934]
-7   9 ( 7- 7, 4- 4)     axis-b    absoluteGrob[GRID.absoluteGrob.941]
-8   4 ( 5- 5, 5- 5)     spacer                         zeroGrob[NULL]
-9   8 ( 6- 6, 5- 5)     axis-r    absoluteGrob[GRID.absoluteGrob.955]
-10  2 ( 7- 7, 5- 5)     spacer                         zeroGrob[NULL]
-11 10 ( 4- 4, 4- 4)     xlab-t                         zeroGrob[NULL]
-12 11 ( 8- 8, 4- 4)     xlab-b   zeroGrob[axis.title.x..zeroGrob.935]
-13 12 ( 6- 6, 2- 2)     ylab-l   zeroGrob[axis.title.y..zeroGrob.936]
-14 13 ( 6- 6, 6- 6)     ylab-r                         zeroGrob[NULL]
-15 14 ( 3- 3, 4- 4)   subtitle  zeroGrob[plot.subtitle..zeroGrob.957]
-16 15 ( 2- 2, 4- 4)      title     zeroGrob[plot.title..zeroGrob.956]
-17 16 ( 9- 9, 4- 4)    caption   zeroGrob[plot.caption..zeroGrob.958]
-18  0 (11-20, 1- 7) background       rect[plot.background..rect.1007]
-19  5 (15-15, 3- 3)     spacer                         zeroGrob[NULL]
-20  7 (16-16, 3- 3)     axis-l    absoluteGrob[GRID.absoluteGrob.995]
-21  3 (17-17, 3- 3)     spacer                         zeroGrob[NULL]
-22  6 (15-15, 4- 4)     axis-t                         zeroGrob[NULL]
-23  1 (16-16, 4- 4)      panel               gTree[panel-1.gTree.977]
-24  9 (17-17, 4- 4)     axis-b    absoluteGrob[GRID.absoluteGrob.988]
-25  4 (15-15, 5- 5)     spacer                         zeroGrob[NULL]
-26  8 (16-16, 5- 5)     axis-r   absoluteGrob[GRID.absoluteGrob.1002]
-27  2 (17-17, 5- 5)     spacer                         zeroGrob[NULL]
-28 10 (14-14, 4- 4)     xlab-t                         zeroGrob[NULL]
-29 11 (18-18, 4- 4)     xlab-b titleGrob[axis.title.x..titleGrob.980]
-30 12 (16-16, 2- 2)     ylab-l   zeroGrob[axis.title.y..zeroGrob.981]
-31 13 (16-16, 6- 6)     ylab-r                         zeroGrob[NULL]
-32 14 (13-13, 4- 4)   subtitle zeroGrob[plot.subtitle..zeroGrob.1004]
-33 15 (12-12, 4- 4)      title    zeroGrob[plot.title..zeroGrob.1003]
-34 16 (19-19, 4- 4)    caption  zeroGrob[plot.caption..zeroGrob.1005]
-35  1 ( 1-20, 1- 7)     layout           segments[GRID.segments.1008]</code></pre>
+    z         cells       name                                       grob
+1   0 ( 1-10, 1- 7) background            rect[plot.background..rect.538]
+2   5 ( 5- 5, 3- 3)     spacer                             zeroGrob[NULL]
+3   7 ( 6- 6, 3- 3)     axis-l        absoluteGrob[GRID.absoluteGrob.526]
+4   3 ( 7- 7, 3- 3)     spacer                             zeroGrob[NULL]
+5   6 ( 5- 5, 4- 4)     axis-t                             zeroGrob[NULL]
+6   1 ( 6- 6, 4- 4)      panel                   gTree[panel-1.gTree.511]
+7   9 ( 7- 7, 4- 4)     axis-b        absoluteGrob[GRID.absoluteGrob.519]
+8   4 ( 5- 5, 5- 5)     spacer                             zeroGrob[NULL]
+9   8 ( 6- 6, 5- 5)     axis-r        absoluteGrob[GRID.absoluteGrob.533]
+10  2 ( 7- 7, 5- 5)     spacer                             zeroGrob[NULL]
+11 10 ( 4- 4, 4- 4)     xlab-t                             zeroGrob[NULL]
+12 11 ( 8- 8, 4- 4)     xlab-b       zeroGrob[axis.title.x..zeroGrob.512]
+13 12 ( 6- 6, 2- 2)     ylab-l       zeroGrob[axis.title.y..zeroGrob.513]
+14 13 ( 6- 6, 6- 6)     ylab-r zeroGrob[axis.title.y.right..zeroGrob.514]
+15 14 ( 3- 3, 4- 4)   subtitle      zeroGrob[plot.subtitle..zeroGrob.535]
+16 15 ( 2- 2, 4- 4)      title         zeroGrob[plot.title..zeroGrob.534]
+17 16 ( 9- 9, 4- 4)    caption       zeroGrob[plot.caption..zeroGrob.536]
+18  0 (11-20, 1- 7) background            rect[plot.background..rect.586]
+19  5 (15-15, 3- 3)     spacer                             zeroGrob[NULL]
+20  7 (16-16, 3- 3)     axis-l        absoluteGrob[GRID.absoluteGrob.574]
+21  3 (17-17, 3- 3)     spacer                             zeroGrob[NULL]
+22  6 (15-15, 4- 4)     axis-t                             zeroGrob[NULL]
+23  1 (16-16, 4- 4)      panel                   gTree[panel-1.gTree.555]
+24  9 (17-17, 4- 4)     axis-b        absoluteGrob[GRID.absoluteGrob.567]
+25  4 (15-15, 5- 5)     spacer                             zeroGrob[NULL]
+26  8 (16-16, 5- 5)     axis-r        absoluteGrob[GRID.absoluteGrob.581]
+27  2 (17-17, 5- 5)     spacer                             zeroGrob[NULL]
+28 10 (14-14, 4- 4)     xlab-t                             zeroGrob[NULL]
+29 11 (18-18, 4- 4)     xlab-b     titleGrob[axis.title.x..titleGrob.558]
+30 12 (16-16, 2- 2)     ylab-l       zeroGrob[axis.title.y..zeroGrob.559]
+31 13 (16-16, 6- 6)     ylab-r zeroGrob[axis.title.y.right..zeroGrob.560]
+32 14 (13-13, 4- 4)   subtitle      zeroGrob[plot.subtitle..zeroGrob.583]
+33 15 (12-12, 4- 4)      title         zeroGrob[plot.title..zeroGrob.582]
+34 16 (19-19, 4- 4)    caption       zeroGrob[plot.caption..zeroGrob.584]
+35  1 ( 1-20, 1- 7)     layout                segments[GRID.segments.587]</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
@@ -513,10 +473,10 @@ gt</code></pre>
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZGV2dG9vbHM6OnNlc3Npb25faW5mbygpXG5gYGAifQ== -->
 <pre class="r"><code>devtools::session_info()</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiU2Vzc2lvbiBpbmZvIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cbiJ9 -->
-<pre><code>Session info -------------------------------------------------------------</code></pre>
+<!-- rnb-output-begin eyJkYXRhIjoiU2Vzc2lvbiBpbmZvIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cbiJ9 -->
+<pre><code>Session info ----------------------------------------------------------------------------------------------------------</code></pre>
 <!-- rnb-output-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiIHNldHRpbmcgIHZhbHVlICAgICAgICAgICAgICAgICAgICAgICBcbiB2ZXJzaW9uICBSIHZlcnNpb24gMy4zLjIgKDIwMTYtMTAtMzEpXG4gc3lzdGVtICAgeDg2XzY0LCBtaW5ndzMyICAgICAgICAgICAgIFxuIHVpICAgICAgIFJTdHVkaW8gKDEuMC40NCkgICAgICAgICAgICBcbiBsYW5ndWFnZSAoRU4pICAgICAgICAgICAgICAgICAgICAgICAgXG4gY29sbGF0ZSAgSmFwYW5lc2VfSmFwYW4uOTMyICAgICAgICAgIFxuIHR6ICAgICAgIEFzaWEvVG9reW8gICAgICAgICAgICAgICAgICBcbiBkYXRlICAgICAyMDE2LTExLTI4ICAgICAgICAgICAgICAgICAgXG4ifQ== -->
+<!-- rnb-output-begin eyJkYXRhIjoiIHNldHRpbmcgIHZhbHVlICAgICAgICAgICAgICAgICAgICAgICBcbiB2ZXJzaW9uICBSIHZlcnNpb24gMy4zLjIgKDIwMTYtMTAtMzEpXG4gc3lzdGVtICAgeDg2XzY0LCBtaW5ndzMyICAgICAgICAgICAgIFxuIHVpICAgICAgIFJTdHVkaW8gKDEuMC40NCkgICAgICAgICAgICBcbiBsYW5ndWFnZSAoRU4pICAgICAgICAgICAgICAgICAgICAgICAgXG4gY29sbGF0ZSAgSmFwYW5lc2VfSmFwYW4uOTMyICAgICAgICAgIFxuIHR6ICAgICAgIEFzaWEvVG9reW8gICAgICAgICAgICAgICAgICBcbiBkYXRlICAgICAyMDE2LTExLTI5ICAgICAgICAgICAgICAgICAgXG4ifQ== -->
 <pre><code> setting  value                       
  version  R version 3.3.2 (2016-10-31)
  system   x86_64, mingw32             
@@ -524,24 +484,20 @@ gt</code></pre>
  language (EN)                        
  collate  Japanese_Japan.932          
  tz       Asia/Tokyo                  
- date     2016-11-28                  </code></pre>
+ date     2016-11-29                  </code></pre>
 <!-- rnb-output-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiUGFja2FnZXMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cbiJ9 -->
-<pre><code>Packages -----------------------------------------------------------------</code></pre>
+<!-- rnb-output-begin eyJkYXRhIjoiUGFja2FnZXMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cbiJ9 -->
+<pre><code>Packages --------------------------------------------------------------------------------------------------------------</code></pre>
 <!-- rnb-output-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiIHBhY2thZ2UgICAgKiB2ZXJzaW9uIGRhdGUgICAgICAgc291cmNlICAgICAgICBcbiBhc3NlcnR0aGF0ICAgMC4xICAgICAyMDEzLTEyLTA2IENSQU4gKFIgMy4yLjEpXG4gYmFzZTY0ZW5jICAgIDAuMS0zICAgMjAxNS0wNy0yOCBDUkFOIChSIDMuMi4yKVxuIGNvbG9yc3BhY2UgICAxLjItNyAgIDIwMTYtMTAtMTEgQ1JBTiAoUiAzLjMuMilcbiBkZXZ0b29scyAgICAgMS4xMi4wICAyMDE2LTA2LTI0IENSQU4gKFIgMy4zLjEpXG4gZGlnZXN0ICAgICAgIDAuNi4xMCAgMjAxNi0wOC0wMiBDUkFOIChSIDMuMy4xKVxuIGV2YWx1YXRlICAgICAwLjEwICAgIDIwMTYtMTAtMTEgQ1JBTiAoUiAzLjMuMilcbiBnZ3Bsb3QyICAgICogMi4yLjAgICAyMDE2LTExLTExIENSQU4gKFIgMy4zLjIpXG4gZ3JpZEV4dHJhICAqIDIuMi4xICAgMjAxNi0wMi0yOSBDUkFOIChSIDMuMi41KVxuIGd0YWJsZSAgICAgKiAwLjIuMCAgIDIwMTYtMDItMjYgQ1JBTiAoUiAzLjIuNSlcbiBodG1sdG9vbHMgICAgMC4zLjUgICAyMDE2LTAzLTIxIENSQU4gKFIgMy4yLjUpXG4ganNvbmxpdGUgICAgIDEuMSAgICAgMjAxNi0wOS0xNCBDUkFOIChSIDMuMi41KVxuIGtuaXRyICAgICAgICAxLjE1ICAgIDIwMTYtMTEtMDkgQ1JBTiAoUiAzLjMuMilcbiBsYWJlbGluZyAgICAgMC4zICAgICAyMDE0LTA4LTIzIENSQU4gKFIgMy4yLjEpXG4gbGF6eWV2YWwgICAgIDAuMi4wICAgMjAxNi0wNi0xMiBDUkFOIChSIDMuMi41KVxuIGx1YnJpZGF0ZSAgKiAxLjYuMCAgIDIwMTYtMDktMTMgQ1JBTiAoUiAzLjIuNSlcbiBtYWdyaXR0ciAgICAgMS41ICAgICAyMDE0LTExLTIyIENSQU4gKFIgMy4yLjEpXG4gbWVtb2lzZSAgICAgIDEuMC4wICAgMjAxNi0wMS0yOSBDUkFOIChSIDMuMi4zKVxuIG11bnNlbGwgICAgICAwLjQuMyAgIDIwMTYtMDItMTMgQ1JBTiAoUiAzLjIuNSlcbiBwaXBlUiAgICAgICogMC42LjEuMyAyMDE2LTA0LTA0IENSQU4gKFIgMy4zLjEpXG4gcGx5ciAgICAgICAgIDEuOC40ICAgMjAxNi0wNi0wOCBDUkFOIChSIDMuMi41KVxuIFJjcHAgICAgICAgICAwLjEyLjcgIDIwMTYtMDktMDUgQ1JBTiAoUiAzLjIuNSlcbiByZWFkciAgICAgICogMS4wLjAgICAyMDE2LTA4LTAzIENSQU4gKFIgMy4yLjUpXG4gcm1hcmtkb3duICAgIDEuMSAgICAgMjAxNi0xMC0xNiBDUkFOIChSIDMuMy4xKVxuIHJzdHVkaW9hcGkgICAwLjYgICAgIDIwMTYtMDYtMjcgQ1JBTiAoUiAzLjIuNSlcbiBzY2FsZXMgICAgICAgMC40LjEgICAyMDE2LTExLTA5IENSQU4gKFIgMy4zLjIpXG4gc3RyaW5naSAgICAgIDEuMS4yICAgMjAxNi0xMC0wMSBDUkFOIChSIDMuMy4yKVxuIHN0cmluZ3IgICAgICAxLjEuMCAgIDIwMTYtMDgtMTkgQ1JBTiAoUiAzLjIuNSlcbiB0aWJibGUgICAgICAgMS4yICAgICAyMDE2LTA4LTI2IENSQU4gKFIgMy4yLjUpXG4gd2l0aHIgICAgICAgIDEuMC4yICAgMjAxNi0wNi0yMCBDUkFOIChSIDMuMi41KVxuIHlhbWwgICAgICAgICAyLjEuMTQgIDIwMTYtMTEtMTIgQ1JBTiAoUiAzLjMuMilcbiJ9 -->
+<!-- rnb-output-begin eyJkYXRhIjoiIHBhY2thZ2UgICAgKiB2ZXJzaW9uIGRhdGUgICAgICAgc291cmNlICAgICAgICBcbiBhc3NlcnR0aGF0ICAgMC4xICAgICAyMDEzLTEyLTA2IENSQU4gKFIgMy4yLjEpXG4gY29sb3JzcGFjZSAgIDEuMi03ICAgMjAxNi0xMC0xMSBDUkFOIChSIDMuMy4yKVxuIGRldnRvb2xzICAgICAxLjEyLjAgIDIwMTYtMDYtMjQgQ1JBTiAoUiAzLjMuMSlcbiBkaWdlc3QgICAgICAgMC42LjEwICAyMDE2LTA4LTAyIENSQU4gKFIgMy4zLjEpXG4gZ2dwbG90MiAgICAqIDIuMi4wICAgMjAxNi0xMS0xMSBDUkFOIChSIDMuMy4yKVxuIGdyaWRFeHRyYSAgKiAyLjIuMSAgIDIwMTYtMDItMjkgQ1JBTiAoUiAzLjIuNSlcbiBndGFibGUgICAgICogMC4yLjAgICAyMDE2LTAyLTI2IENSQU4gKFIgMy4yLjUpXG4ga25pdHIgICAgICAgIDEuMTUgICAgMjAxNi0xMS0wOSBDUkFOIChSIDMuMy4yKVxuIGxhYmVsaW5nICAgICAwLjMgICAgIDIwMTQtMDgtMjMgQ1JBTiAoUiAzLjIuMSlcbiBsYXp5ZXZhbCAgICAgMC4yLjAgICAyMDE2LTA2LTEyIENSQU4gKFIgMy4yLjUpXG4gbHVicmlkYXRlICAqIDEuNi4wICAgMjAxNi0wOS0xMyBDUkFOIChSIDMuMi41KVxuIG1hZ3JpdHRyICAgICAxLjUgICAgIDIwMTQtMTEtMjIgQ1JBTiAoUiAzLjIuMSlcbiBtZW1vaXNlICAgICAgMS4wLjAgICAyMDE2LTAxLTI5IENSQU4gKFIgMy4yLjMpXG4gbXVuc2VsbCAgICAgIDAuNC4zICAgMjAxNi0wMi0xMyBDUkFOIChSIDMuMi41KVxuIHBpcGVSICAgICAgKiAwLjYuMS4zIDIwMTYtMDQtMDQgQ1JBTiAoUiAzLjMuMSlcbiBwbHlyICAgICAgICAgMS44LjQgICAyMDE2LTA2LTA4IENSQU4gKFIgMy4yLjUpXG4gUmNwcCAgICAgICAgIDAuMTIuNyAgMjAxNi0wOS0wNSBDUkFOIChSIDMuMi41KVxuIHJlYWRyICAgICAgKiAxLjAuMCAgIDIwMTYtMDgtMDMgQ1JBTiAoUiAzLjIuNSlcbiBzY2FsZXMgICAgICAgMC40LjEgICAyMDE2LTExLTA5IENSQU4gKFIgMy4zLjIpXG4gc3RyaW5naSAgICAgIDEuMS4yICAgMjAxNi0xMC0wMSBDUkFOIChSIDMuMy4yKVxuIHN0cmluZ3IgICAgICAxLjEuMCAgIDIwMTYtMDgtMTkgQ1JBTiAoUiAzLjIuNSlcbiB0aWJibGUgICAgICAgMS4yICAgICAyMDE2LTA4LTI2IENSQU4gKFIgMy4yLjUpXG4gd2l0aHIgICAgICAgIDEuMC4yICAgMjAxNi0wNi0yMCBDUkFOIChSIDMuMi41KVxuIn0= -->
 <pre><code> package    * version date       source        
  assertthat   0.1     2013-12-06 CRAN (R 3.2.1)
- base64enc    0.1-3   2015-07-28 CRAN (R 3.2.2)
  colorspace   1.2-7   2016-10-11 CRAN (R 3.3.2)
  devtools     1.12.0  2016-06-24 CRAN (R 3.3.1)
  digest       0.6.10  2016-08-02 CRAN (R 3.3.1)
- evaluate     0.10    2016-10-11 CRAN (R 3.3.2)
  ggplot2    * 2.2.0   2016-11-11 CRAN (R 3.3.2)
  gridExtra  * 2.2.1   2016-02-29 CRAN (R 3.2.5)
  gtable     * 0.2.0   2016-02-26 CRAN (R 3.2.5)
- htmltools    0.3.5   2016-03-21 CRAN (R 3.2.5)
- jsonlite     1.1     2016-09-14 CRAN (R 3.2.5)
  knitr        1.15    2016-11-09 CRAN (R 3.3.2)
  labeling     0.3     2014-08-23 CRAN (R 3.2.1)
  lazyeval     0.2.0   2016-06-12 CRAN (R 3.2.5)
@@ -553,19 +509,16 @@ gt</code></pre>
  plyr         1.8.4   2016-06-08 CRAN (R 3.2.5)
  Rcpp         0.12.7  2016-09-05 CRAN (R 3.2.5)
  readr      * 1.0.0   2016-08-03 CRAN (R 3.2.5)
- rmarkdown    1.1     2016-10-16 CRAN (R 3.3.1)
- rstudioapi   0.6     2016-06-27 CRAN (R 3.2.5)
  scales       0.4.1   2016-11-09 CRAN (R 3.3.2)
  stringi      1.1.2   2016-10-01 CRAN (R 3.3.2)
  stringr      1.1.0   2016-08-19 CRAN (R 3.2.5)
  tibble       1.2     2016-08-26 CRAN (R 3.2.5)
- withr        1.0.2   2016-06-20 CRAN (R 3.2.5)
- yaml         2.1.14  2016-11-12 CRAN (R 3.3.2)</code></pre>
+ withr        1.0.2   2016-06-20 CRAN (R 3.2.5)</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 </div>
 
-<div id="rmd-source-code">LS0tDQp0aXRsZTogImdncGxvdDI6IENvbWJpbmUgdHdvIHBsb3RzIGJ5IFJvdyINCm91dHB1dDogaHRtbF9ub3RlYm9vaw0KLS0tDQoNCkNvbWJpbmUgW3R3byBwbG90c10oaHR0cHM6Ly93aGF0YWxuay5naXRodWIuaW8vci10aXBzL2dncGxvdDItc2Vjb25kYXJ5LXktYXhpcy5uYi5odG1sKSBieSByb3cNCg0KYGBge3J9DQpzYXBwbHkoYygicGlwZVIiLCAiZ2dwbG90MiIsICJyZWFkciIsICJsdWJyaWRhdGUiKSwgcmVxdWlyZSwgY2hhcmFjdGVyLm9ubHkgPSBUUlVFKQ0KYGBgDQpOYWhhDQpgYGB7cn0NCmQxIDwtIHJlYWRfY3N2KCJkYXRhL2dncGxvdDItdHdvLWF4aXMvbmFoYS5jc3YiLCBza2lwID0gNSwgY29sX25hbWVzID0gYygiRGF0ZSIsICJUZW1wZXJhdHVyZSIsICJQcmVjaXBpdGF0aW9uIiksIGNvbF90eXBlcyA9IGNvbHMoY29sX2RhdGUoZm9ybWF0ID0gIiVZLyVtIiksICJkIiwgIl8iLCAiXyIsICJkIiwgIl8iLCAiXyIsICJfIiksIGxvY2FsZSA9IGxvY2FsZShlbmNvZGluZyA9ICJTSklTIikpDQpoZWFkKGQxKQ0KYGBgDQoNClVzZSBgZ2VvbV9zZWdtZW50KClgIHRvIG1hdGNoIHggYXhpcw0KDQpgYGB7cn0NCmdwMSA8LSBkMSAlPj4lIGdncGxvdCgpICsgDQogIGdlb21fc2VnbWVudChtYXBwaW5nID0gYWVzKHggPSBEYXRlLCB5ID0gUHJlY2lwaXRhdGlvbiAqIDMwIC8gNDAwLCB4ZW5kID0gRGF0ZSwgeWVuZCA9IDApLCBzaXplID0gMTEsIGxpbmVlbmQgPSAiYnV0dCIsIGNvbG91ciA9IGdyYXkoMC41KSkgKyANCiAgZ2VvbV9saW5lKG1hcHBpbmcgPSBhZXMoeCA9IERhdGUsIHkgPSBUZW1wZXJhdHVyZSkpICsgDQogIGdlb21fcG9pbnQobWFwcGluZyA9IGFlcyh4ID0gRGF0ZSwgeSA9IFRlbXBlcmF0dXJlKSwgc2l6ZSA9IDMsIHNoYXBlID0gMjEsIGZpbGwgPSAid2hpdGUiKSArIA0KICBzY2FsZV94X2RhdGUobmFtZSA9ICJNb250aCIsIGJyZWFrcyA9IHNlcS5EYXRlKGFzLkRhdGUoIjIwMTUtMDEtMDEiKSwgYXMuRGF0ZSgiMjAxNS0xMi0zMSIpLCBieSA9ICIxIG1vbnRoIiksIGxhYmVscyA9IGZ1bmN0aW9uKGRhdGUpe3JldHVybihtb250aChkYXRlLCBsYWJlbCA9IFRSVUUpKX0pICsgDQogIHNjYWxlX3lfY29udGludW91cygNCiAgICBuYW1lID0gZXhwcmVzc2lvbigiVGVtcGVyYXR1cmUgKCJ+ZGVncmVlfiJDKSIpLCANCiAgICBzZWMuYXhpcyA9IHNlY19heGlzKH4gLiAqIDQwMCAvIDMwICwgbmFtZSA9ICJQcmVjaXBpdGF0aW9uIChtbSkiKSwgDQogICAgbGltaXRzID0gYygwLCAzMCkpICsgDQogIHRoZW1lX2J3KCkgKyANCiAgdGhlbWUoDQogICAgcGFuZWwuZ3JpZC5tYWpvciA9IGVsZW1lbnRfYmxhbmsoKSwgDQogICAgcGFuZWwuZ3JpZC5taW5vciA9IGVsZW1lbnRfYmxhbmsoKQ0KICApDQpncDENCmBgYA0KDQpLdXNoaXJvDQpgYGB7cn0NCmQyIDwtIHJlYWRfY3N2KCJkYXRhL2dncGxvdDItdHdvLWF4aXMva3VzaGlyby5jc3YiLCBza2lwID0gNSwgY29sX25hbWVzID0gYygiRGF0ZSIsICJUZW1wZXJhdHVyZSIsICJQcmVjaXBpdGF0aW9uIiksIGNvbF90eXBlcyA9IGNvbHMoY29sX2RhdGUoZm9ybWF0ID0gIiVZLyVtIiksICJkIiwgIl8iLCAiXyIsICJkIiwgIl8iLCAiXyIsICJfIiksIGxvY2FsZSA9IGxvY2FsZShlbmNvZGluZyA9ICJTSklTIikpDQpoZWFkKGQyKQ0KYGBgDQoNCmBgYHtyfQ0KZ3AyIDwtIGQyICU+PiUgZ2dwbG90KCkgKyANCiAgZ2VvbV9zZWdtZW50KG1hcHBpbmcgPSBhZXMoeCA9IERhdGUsIHkgPSBQcmVjaXBpdGF0aW9uIC8gMTAgLSA1LCB4ZW5kID0gRGF0ZSwgeWVuZCA9IC01KSwgc2l6ZSA9IDExLCBsaW5lZW5kID0gImJ1dHQiLCBjb2xvdXIgPSBncmF5KDAuNSkpICsNCiAgZ2VvbV9saW5lKG1hcHBpbmcgPSBhZXMoeCA9IERhdGUsIHkgPSBUZW1wZXJhdHVyZSkpICsNCiAgZ2VvbV9wb2ludChtYXBwaW5nID0gYWVzKHggPSBEYXRlLCB5ID0gVGVtcGVyYXR1cmUpLCBzaXplID0gMywgc2hhcGUgPSAyMSwgZmlsbCA9ICJ3aGl0ZSIpICsNCiAgc2NhbGVfeF9kYXRlKG5hbWUgPSAiTW9udGgiLCBicmVha3MgPSBzZXEuRGF0ZShhcy5EYXRlKCIyMDE1LTAxLTAxIiksIGFzLkRhdGUoIjIwMTUtMTItMzEiKSwgYnkgPSAiMSBtb250aCIpLCBsYWJlbHMgPSBmdW5jdGlvbihkYXRlKXtyZXR1cm4obW9udGgoZGF0ZSwgbGFiZWwgPSBUUlVFKSl9KSArDQogIHNjYWxlX3lfY29udGludW91cygNCiAgICBuYW1lID0gZXhwcmVzc2lvbigiVGVtcGVyYXR1cmUgKCJ+ZGVncmVlfiJDKSIpLA0KICAgIHNlYy5heGlzID0gc2VjX2F4aXMofiAoLiArIDUpICogMTAgLCBuYW1lID0gIlByZWNpcGl0YXRpb24gKG1tKSIpLA0KICAgIGxpbWl0cyA9IGMoLTUsIDIwKSkgKw0KICB0aGVtZV9idygpICsNCiAgdGhlbWUoDQogICAgcGFuZWwuZ3JpZC5tYWpvciA9IGVsZW1lbnRfYmxhbmsoKSwNCiAgICBwYW5lbC5ncmlkLm1pbm9yID0gZWxlbWVudF9ibGFuaygpDQogICkNCmdwMg0KYGBgDQoNCkNvbWJpbmUgYnkgYGdyaWRFeHRyYTo6Z3JpZC5hcnJhbmdlKClgDQoNCmBgYHtyfQ0KbGlicmFyeSgiZ3JpZEV4dHJhIikNCmBgYA0KYGBge3J9DQpncmlkLmFycmFuZ2UoZ3AxLCBncDIsIG5yb3cgPSAyLCBoZWlnaHRzID0gYygxLCAxKSkNCmBgYA0KDQpTaGFyZSBYIGF4aXMNCmBgYHtyfQ0KZ3AxIDwtIGQxICU+PiUgZ2dwbG90KCkgKyANCiAgZ2VvbV9zZWdtZW50KG1hcHBpbmcgPSBhZXMoeCA9IERhdGUsIHkgPSBQcmVjaXBpdGF0aW9uICogMzAgLyA0MDAsIHhlbmQgPSBEYXRlLCB5ZW5kID0gMCksIHNpemUgPSAxMSwgbGluZWVuZCA9ICJidXR0IiwgY29sb3VyID0gZ3JheSgwLjUpKSArDQogIGdlb21fbGluZShtYXBwaW5nID0gYWVzKHggPSBEYXRlLCB5ID0gVGVtcGVyYXR1cmUpKSArIA0KICBnZW9tX3BvaW50KG1hcHBpbmcgPSBhZXMoeCA9IERhdGUsIHkgPSBUZW1wZXJhdHVyZSksIHNpemUgPSAzLCBzaGFwZSA9IDIxLCBmaWxsID0gIndoaXRlIikgKyANCiAgc2NhbGVfeF9kYXRlKG5hbWUgPSAiTW9udGgiLCBicmVha3MgPSBzZXEuRGF0ZShhcy5EYXRlKCIyMDE1LTAxLTAxIiksIGFzLkRhdGUoIjIwMTUtMTItMzEiKSwgYnkgPSAiMSBtb250aCIpLCBsYWJlbHMgPSBmdW5jdGlvbihkYXRlKXtyZXR1cm4obW9udGgoZGF0ZSwgbGFiZWwgPSBUUlVFKSl9KSArIA0KICBzY2FsZV95X2NvbnRpbnVvdXMoDQogICAgbmFtZSA9IGV4cHJlc3Npb24oIlRlbXBlcmF0dXJlICgifmRlZ3JlZX4iQykiKSwgDQogICAgc2VjLmF4aXMgPSBzZWNfYXhpcyh+IC4gKiA0MDAgLyAzMCAsIG5hbWUgPSAiUHJlY2lwaXRhdGlvbiAobW0pIiksIA0KICAgIGxpbWl0cyA9IGMoMCwgMzApKSArIA0KICB0aGVtZV9idygpICsgDQogIHRoZW1lKA0KICAgIHBhbmVsLmdyaWQubWFqb3IgPSBlbGVtZW50X2JsYW5rKCksIA0KICAgIHBhbmVsLmdyaWQubWlub3IgPSBlbGVtZW50X2JsYW5rKCksIA0KICAgIGF4aXMudGl0bGUueCA9IGVsZW1lbnRfYmxhbmsoKSwgDQogICAgYXhpcy50ZXh0LnggPSBlbGVtZW50X2JsYW5rKCkNCiAgKQ0KZ3JpZC5hcnJhbmdlKGdwMSwgZ3AyLCBucm93ID0gMiwgaGVpZ2h0cyA9IGMoMSwgMSkpDQpgYGANCg0KRml4IHRoZSBoZWlnaHQgb2YgYWJvdmUgcGxvdA0KDQoqIENyZWF0ZSBncm9iIGJ5IGBnZ3Bsb3QyOjpnZ3Bsb3RHcm9iKClgIA0KKiBDb21iaW5lIGdyb2IgYW5kIGZpeCB0aGUgaGVpZ2h0IGJ5IGBncmlkRXh0cmE6OnJiaW5kKGdyb2IxLCBncm9iMiwgc2l6ZSA9ICJsYXN0IilgDQoqIERyYXcgYnkgYGdyaWRFeHRyYTo6Z3JpZC5hcnJhbmdlKClgDQoNCmBgYHtyfQ0KZ3JpZC5hcnJhbmdlKHJiaW5kKGdncGxvdEdyb2IoZ3AxKSwgZ2dwbG90R3JvYihncDIpLCBzaXplID0gImxhc3QiKSkNCmBgYA0KDQpTaGFyZSBZIGF4aXMgdGl0bGUNCg0KKiBEcmF3IGZpcnN0IFkgYXhpcyBieSBwYXJhbWV0ZXIgYGxlZnRgIG9mIGBncmlkLmFycmFuZ2UoKWAsIHNlY29uZCBZIGF4aXMgYnkgYHJpZ2h0YA0KKiBBcyBmb3IgYGV4cHJlc3Npb24oKWAsIHVzZSBgZ3JpZDo6dGV4dEdyb2IoKWANCg0KYGBge3J9DQpsaWJyYXJ5KGdyaWQpDQpgYGANCmBgYHtyfQ0KZ3AxIDwtIGQxICU+PiUgZ2dwbG90KCkgKyANCiAgZ2VvbV9zZWdtZW50KG1hcHBpbmcgPSBhZXMoeCA9IERhdGUsIHkgPSBQcmVjaXBpdGF0aW9uICogMzAgLyA0MDAsIHhlbmQgPSBEYXRlLCB5ZW5kID0gMCksIHNpemUgPSAxMSwgbGluZWVuZCA9ICJidXR0IiwgY29sb3VyID0gZ3JheSgwLjUpKSArDQogIGdlb21fbGluZShtYXBwaW5nID0gYWVzKHggPSBEYXRlLCB5ID0gVGVtcGVyYXR1cmUpKSArIA0KICBnZW9tX3BvaW50KG1hcHBpbmcgPSBhZXMoeCA9IERhdGUsIHkgPSBUZW1wZXJhdHVyZSksIHNpemUgPSAzLCBzaGFwZSA9IDIxLCBmaWxsID0gIndoaXRlIikgKyANCiAgc2NhbGVfeF9kYXRlKG5hbWUgPSAiTW9udGgiLCBicmVha3MgPSBzZXEuRGF0ZShhcy5EYXRlKCIyMDE1LTAxLTAxIiksIGFzLkRhdGUoIjIwMTUtMTItMzEiKSwgYnkgPSAiMSBtb250aCIpLCBsYWJlbHMgPSBmdW5jdGlvbihkYXRlKXtyZXR1cm4obW9udGgoZGF0ZSwgbGFiZWwgPSBUUlVFKSl9KSArIA0KICBzY2FsZV95X2NvbnRpbnVvdXMoDQogICAgc2VjLmF4aXMgPSBzZWNfYXhpcyh+IC4gKiA0MDAgLyAzMCksIA0KICAgIGxpbWl0cyA9IGMoMCwgMzApKSArIA0KICB0aGVtZV9idygpICsgDQogIHRoZW1lKA0KICAgIHBhbmVsLmdyaWQubWFqb3IgPSBlbGVtZW50X2JsYW5rKCksIA0KICAgIHBhbmVsLmdyaWQubWlub3IgPSBlbGVtZW50X2JsYW5rKCksIA0KICAgIGF4aXMudGl0bGUueCA9IGVsZW1lbnRfYmxhbmsoKSwgDQogICAgYXhpcy50ZXh0LnggPSBlbGVtZW50X2JsYW5rKCksIA0KICAgIGF4aXMudGl0bGUueSA9IGVsZW1lbnRfYmxhbmsoKSkgKyANCiAgYW5ub3RhdGUoInRleHQiLCB4ID0gYXMuRGF0ZSgiMjAxNS0wMS0wMSIpLCB5ID0gMjgsIGxhYmVsID0gIk5haGEiLCBoanVzdCA9IDApDQoNCmdwMiA8LSBkMiAlPj4lIGdncGxvdCgpICsgDQogIGdlb21fc2VnbWVudChtYXBwaW5nID0gYWVzKHggPSBEYXRlLCB5ID0gUHJlY2lwaXRhdGlvbiAvIDEwIC0gNSwgeGVuZCA9IERhdGUsIHllbmQgPSAtNSksIHNpemUgPSAxMSwgbGluZWVuZCA9ICJidXR0IiwgY29sb3VyID0gZ3JheSgwLjUpKSArDQogIGdlb21fbGluZShtYXBwaW5nID0gYWVzKHggPSBEYXRlLCB5ID0gVGVtcGVyYXR1cmUpKSArDQogIGdlb21fcG9pbnQobWFwcGluZyA9IGFlcyh4ID0gRGF0ZSwgeSA9IFRlbXBlcmF0dXJlKSwgc2l6ZSA9IDMsIHNoYXBlID0gMjEsIGZpbGwgPSAid2hpdGUiKSArDQogIHNjYWxlX3hfZGF0ZShuYW1lID0gIk1vbnRoIiwgYnJlYWtzID0gc2VxLkRhdGUoYXMuRGF0ZSgiMjAxNS0wMS0wMSIpLCBhcy5EYXRlKCIyMDE1LTEyLTMxIiksIGJ5ID0gIjEgbW9udGgiKSwgbGFiZWxzID0gZnVuY3Rpb24oZGF0ZSl7cmV0dXJuKG1vbnRoKGRhdGUsIGxhYmVsID0gVFJVRSkpfSkgKw0KICBzY2FsZV95X2NvbnRpbnVvdXMoDQogICAgc2VjLmF4aXMgPSBzZWNfYXhpcyh+ICguICsgNSkgKiAxMCksDQogICAgbGltaXRzID0gYygtNSwgMjApKSArDQogIHRoZW1lX2J3KCkgKw0KICB0aGVtZSgNCiAgICBwYW5lbC5ncmlkLm1ham9yID0gZWxlbWVudF9ibGFuaygpLA0KICAgIHBhbmVsLmdyaWQubWlub3IgPSBlbGVtZW50X2JsYW5rKCksIA0KICAgIGF4aXMudGl0bGUueSA9IGVsZW1lbnRfYmxhbmsoKSkgKyANCiAgYW5ub3RhdGUoInRleHQiLCB4ID0gYXMuRGF0ZSgiMjAxNS0wMS0wMSIpLCB5ID0gMTgsIGxhYmVsID0gIkt1c2hpcm8iLCBoanVzdCA9IDApDQoNCmdyaWQuYXJyYW5nZShyYmluZChnZ3Bsb3RHcm9iKGdwMSksIGdncGxvdEdyb2IoZ3AyKSwgc2l6ZSA9ICJsYXN0IiksIGxlZnQgPSB0ZXh0R3JvYihsYWJlbCA9IGV4cHJlc3Npb24oIlRlbXBlcmF0dXJlICgifmRlZ3JlZX4iQykiKSwgcm90ID0gOTApLCByaWdodCA9ICJQcmVjaXBpdGF0aW9uIChtbSkiKQ0KYGBgDQoNCiMgRHJhdyBsaW5lIGZyb20gdG9wIG9mIGFib3ZlIHBsb3QgdG8gYm90dG9tIG9mIGJlbG93IHBsb3QNCmBgYHtyfQ0KbGlicmFyeSgiZ3RhYmxlIikNCmBgYA0KDQoyMCAkXHRpbWVzJCA3IGBndGFibGVgDQoNCmBgYHtyfQ0KZ3AxMiA8LSByYmluZChnZ3Bsb3RHcm9iKGdwMSksIGdncGxvdEdyb2IoZ3AyKSwgc2l6ZSA9ICJsYXN0IikNCmdwMTINCmBgYA0KDQoqIERyYXcgbGluZSBieSBgZ3JpZDo6c2VnbWVudHNHcm9iKClgIG9uICAoYXBwcm94aW1hdGVseSkgYDIwMTYtMDEtMDFgDQoqIEFkZCBgc2VnbWVudHNHcm9iKClgIHRvIGV4aXN0aW5nIHBsb3QgYnkgYGd0YWJsZTo6Z3RhYmxlX2FkZF9ncm9iKClgDQogICAgKiBUbyBvdmVybGF5IG9uIHRoZSBlbnRpcmUgcGxvdCAoMjAgJFx0aW1lcyQgNyksIHNwZWNpZnkgYHQgPSAxLCBsID0gMSwgYiA9IDIwLCByID0gN2ANCg0KYGBge3J9DQpndCA8LSBndGFibGVfYWRkX2dyb2IoZ3AxMiwgc2VnbWVudHNHcm9iKHgwID0gMC40NTUsIHgxID0gMC40NTUsIHkwID0gMC4xLCB5MSA9IDAuOTgsIGdwPWdwYXIobHR5PSJkYXNoZWQiKSksIHQgPSAxLCBsID0gMSwgYiA9IDIwLCByID0gNywgeiA9IDEpDQpndA0KYGBgDQoNCkRyYXcgaXQNCmBgYHtyfQ0KZ3JpZC5hcnJhbmdlKGd0LCBsZWZ0ID0gdGV4dEdyb2IobGFiZWwgPSBleHByZXNzaW9uKCJUZW1wZXJhdHVyZSAoIn5kZWdyZWV+IkMpIiksIHJvdCA9IDkwKSwgcmlnaHQgPSAiUHJlY2lwaXRhdGlvbiAobW0pIikNCmBgYA0KDQpgYGB7cn0NCmRldnRvb2xzOjpzZXNzaW9uX2luZm8oKQ0KYGBg</div>
+<div id="rmd-source-code">LS0tDQp0aXRsZTogImdncGxvdDI6IENvbWJpbmUgdHdvIHBsb3RzIGJ5IFJvdyINCm91dHB1dDogaHRtbF9ub3RlYm9vaw0KLS0tDQoNCkNvbWJpbmUgW3R3byBwbG90c10oaHR0cHM6Ly93aGF0YWxuay5naXRodWIuaW8vci10aXBzL2dncGxvdDItc2Vjb25kYXJ5LXktYXhpcy5uYi5odG1sKSBieSByb3cNCg0KYGBge3J9DQpzYXBwbHkoYygicGlwZVIiLCAiZ2dwbG90MiIsICJyZWFkciIsICJsdWJyaWRhdGUiKSwgcmVxdWlyZSwgY2hhcmFjdGVyLm9ubHkgPSBUUlVFKQ0KYGBgDQpOYWhhDQpgYGB7cn0NCmQxIDwtIHJlYWRfY3N2KCJkYXRhL2dncGxvdDItdHdvLWF4aXMvbmFoYS5jc3YiLCBza2lwID0gNSwgY29sX25hbWVzID0gYygiRGF0ZSIsICJUZW1wZXJhdHVyZSIsICJQcmVjaXBpdGF0aW9uIiksIGNvbF90eXBlcyA9IGNvbHMoY29sX2RhdGUoZm9ybWF0ID0gIiVZLyVtIiksICJkIiwgIl8iLCAiXyIsICJkIiwgIl8iLCAiXyIsICJfIiksIGxvY2FsZSA9IGxvY2FsZShlbmNvZGluZyA9ICJTSklTIikpDQpoZWFkKGQxKQ0KYGBgDQoNClVzZSBgZ2VvbV9zZWdtZW50KClgIHRvIG1hdGNoIHggYXhpcw0KDQpgYGB7cn0NCmdwMSA8LSBkMSAlPj4lIGdncGxvdCgpICsgDQogIGdlb21fc2VnbWVudChtYXBwaW5nID0gYWVzKHggPSBEYXRlLCB5ID0gUHJlY2lwaXRhdGlvbiAqIDMwIC8gNDAwLCB4ZW5kID0gRGF0ZSwgeWVuZCA9IDApLCBzaXplID0gMTEsIGxpbmVlbmQgPSAiYnV0dCIsIGNvbG91ciA9IGdyYXkoMC41KSkgKyANCiAgZ2VvbV9saW5lKG1hcHBpbmcgPSBhZXMoeCA9IERhdGUsIHkgPSBUZW1wZXJhdHVyZSkpICsgDQogIGdlb21fcG9pbnQobWFwcGluZyA9IGFlcyh4ID0gRGF0ZSwgeSA9IFRlbXBlcmF0dXJlKSwgc2l6ZSA9IDMsIHNoYXBlID0gMjEsIGZpbGwgPSAid2hpdGUiKSArIA0KICBzY2FsZV94X2RhdGUobmFtZSA9ICJNb250aCIsIGJyZWFrcyA9IHNlcS5EYXRlKGFzLkRhdGUoIjIwMTUtMDEtMDEiKSwgYXMuRGF0ZSgiMjAxNS0xMi0zMSIpLCBieSA9ICIxIG1vbnRoIiksIGxhYmVscyA9IGZ1bmN0aW9uKGRhdGUpe3JldHVybihtb250aChkYXRlLCBsYWJlbCA9IFRSVUUpKX0pICsgDQogIHNjYWxlX3lfY29udGludW91cygNCiAgICBuYW1lID0gZXhwcmVzc2lvbigiVGVtcGVyYXR1cmUgKCJ+ZGVncmVlfiJDKSIpLCANCiAgICBzZWMuYXhpcyA9IHNlY19heGlzKH4gLiAqIDQwMCAvIDMwICwgbmFtZSA9ICJQcmVjaXBpdGF0aW9uIChtbSkiKSwgDQogICAgbGltaXRzID0gYygwLCAzMCkpICsgDQogIHRoZW1lX2J3KCkgKyANCiAgdGhlbWUoDQogICAgcGFuZWwuZ3JpZC5tYWpvciA9IGVsZW1lbnRfYmxhbmsoKSwgDQogICAgcGFuZWwuZ3JpZC5taW5vciA9IGVsZW1lbnRfYmxhbmsoKQ0KICApDQpncDENCmBgYA0KDQpLdXNoaXJvDQpgYGB7cn0NCmQyIDwtIHJlYWRfY3N2KCJkYXRhL2dncGxvdDItdHdvLWF4aXMva3VzaGlyby5jc3YiLCBza2lwID0gNSwgY29sX25hbWVzID0gYygiRGF0ZSIsICJUZW1wZXJhdHVyZSIsICJQcmVjaXBpdGF0aW9uIiksIGNvbF90eXBlcyA9IGNvbHMoY29sX2RhdGUoZm9ybWF0ID0gIiVZLyVtIiksICJkIiwgIl8iLCAiXyIsICJkIiwgIl8iLCAiXyIsICJfIiksIGxvY2FsZSA9IGxvY2FsZShlbmNvZGluZyA9ICJTSklTIikpDQpoZWFkKGQyKQ0KYGBgDQoNCmBgYHtyfQ0KZ3AyIDwtIGQyICU+PiUgZ2dwbG90KCkgKyANCiAgZ2VvbV9zZWdtZW50KG1hcHBpbmcgPSBhZXMoeCA9IERhdGUsIHkgPSBQcmVjaXBpdGF0aW9uIC8gMTAgLSA1LCB4ZW5kID0gRGF0ZSwgeWVuZCA9IC01KSwgc2l6ZSA9IDExLCBsaW5lZW5kID0gImJ1dHQiLCBjb2xvdXIgPSBncmF5KDAuNSkpICsNCiAgZ2VvbV9saW5lKG1hcHBpbmcgPSBhZXMoeCA9IERhdGUsIHkgPSBUZW1wZXJhdHVyZSkpICsNCiAgZ2VvbV9wb2ludChtYXBwaW5nID0gYWVzKHggPSBEYXRlLCB5ID0gVGVtcGVyYXR1cmUpLCBzaXplID0gMywgc2hhcGUgPSAyMSwgZmlsbCA9ICJ3aGl0ZSIpICsNCiAgc2NhbGVfeF9kYXRlKG5hbWUgPSAiTW9udGgiLCBicmVha3MgPSBzZXEuRGF0ZShhcy5EYXRlKCIyMDE1LTAxLTAxIiksIGFzLkRhdGUoIjIwMTUtMTItMzEiKSwgYnkgPSAiMSBtb250aCIpLCBsYWJlbHMgPSBmdW5jdGlvbihkYXRlKXtyZXR1cm4obW9udGgoZGF0ZSwgbGFiZWwgPSBUUlVFKSl9KSArDQogIHNjYWxlX3lfY29udGludW91cygNCiAgICBuYW1lID0gZXhwcmVzc2lvbigiVGVtcGVyYXR1cmUgKCJ+ZGVncmVlfiJDKSIpLA0KICAgIHNlYy5heGlzID0gc2VjX2F4aXMofiAoLiArIDUpICogMTAgLCBuYW1lID0gIlByZWNpcGl0YXRpb24gKG1tKSIpLA0KICAgIGxpbWl0cyA9IGMoLTUsIDIwKSkgKw0KICB0aGVtZV9idygpICsNCiAgdGhlbWUoDQogICAgcGFuZWwuZ3JpZC5tYWpvciA9IGVsZW1lbnRfYmxhbmsoKSwNCiAgICBwYW5lbC5ncmlkLm1pbm9yID0gZWxlbWVudF9ibGFuaygpDQogICkNCmdwMg0KYGBgDQoNCkNvbWJpbmUgYnkgYGdyaWRFeHRyYTo6Z3JpZC5hcnJhbmdlKClgDQoNCmBgYHtyfQ0KbGlicmFyeSgiZ3JpZEV4dHJhIikNCmBgYA0KYGBge3J9DQpncmlkLmFycmFuZ2UoZ3AxLCBncDIsIG5yb3cgPSAyLCBoZWlnaHRzID0gYygxLCAxKSkNCmBgYA0KDQpTaGFyZSBYIGF4aXMNCmBgYHtyfQ0KZ3AxJHRoZW1lJGF4aXMudGl0bGUueCA8LSBlbGVtZW50X2JsYW5rKCkNCmdwMSR0aGVtZSRheGlzLnRleHQueCA8LSBlbGVtZW50X2JsYW5rKCkNCmdyaWQuYXJyYW5nZShncDEsIGdwMiwgbnJvdyA9IDIsIGhlaWdodHMgPSBjKDEsIDEpKQ0KYGBgDQoNCkZpeCB0aGUgaGVpZ2h0IG9mIGFib3ZlIHBsb3QNCg0KKiBDcmVhdGUgZ3JvYiBieSBgZ2dwbG90Mjo6Z2dwbG90R3JvYigpYCANCiogQ29tYmluZSBncm9iIGFuZCBmaXggdGhlIGhlaWdodCBieSBgZ3JpZEV4dHJhOjpyYmluZChncm9iMSwgZ3JvYjIsIHNpemUgPSAibGFzdCIpYA0KKiBEcmF3IGJ5IGBncmlkRXh0cmE6OmdyaWQuYXJyYW5nZSgpYA0KDQpgYGB7cn0NCmdyaWQuYXJyYW5nZShyYmluZChnZ3Bsb3RHcm9iKGdwMSksIGdncGxvdEdyb2IoZ3AyKSwgc2l6ZSA9ICJsYXN0IikpDQpgYGANCg0KU2hhcmUgWSBheGlzIHRpdGxlDQoNCiogRHJhdyBmaXJzdCBZIGF4aXMgYnkgcGFyYW1ldGVyIGBsZWZ0YCBvZiBgZ3JpZC5hcnJhbmdlKClgLCBzZWNvbmQgWSBheGlzIGJ5IGByaWdodGANCiogQXMgZm9yIGBleHByZXNzaW9uKClgLCB1c2UgYGdyaWQ6OnRleHRHcm9iKClgDQoNCmBgYHtyfQ0KbGlicmFyeShncmlkKQ0KYGBgDQpgYGB7cn0NCmdwMSR0aGVtZSRheGlzLnRpdGxlLnkgPC0gZWxlbWVudF9ibGFuaygpDQpncDEgPC0gZ3AxICsgYW5ub3RhdGUoInRleHQiLCB4ID0gYXMuRGF0ZSgiMjAxNS0wMS0wMSIpLCB5ID0gMjgsIGxhYmVsID0gIk5haGEiLCBoanVzdCA9IDApDQoNCmdwMiR0aGVtZSRheGlzLnRpdGxlLnkgPC0gZWxlbWVudF9ibGFuaygpDQpncDIgPC0gZ3AyICsgYW5ub3RhdGUoInRleHQiLCB4ID0gYXMuRGF0ZSgiMjAxNS0wMS0wMSIpLCB5ID0gMTgsIGxhYmVsID0gIkt1c2hpcm8iLCBoanVzdCA9IDApDQoNCmdyaWQuYXJyYW5nZShyYmluZChnZ3Bsb3RHcm9iKGdwMSksIGdncGxvdEdyb2IoZ3AyKSwgc2l6ZSA9ICJsYXN0IiksIGxlZnQgPSB0ZXh0R3JvYihsYWJlbCA9IGV4cHJlc3Npb24oIlRlbXBlcmF0dXJlICgifmRlZ3JlZX4iQykiKSwgcm90ID0gOTApLCByaWdodCA9ICJQcmVjaXBpdGF0aW9uIChtbSkiKQ0KYGBgDQoNCiMgRHJhdyBsaW5lIGZyb20gdG9wIG9mIGFib3ZlIHBsb3QgdG8gYm90dG9tIG9mIGJlbG93IHBsb3QNCmBgYHtyfQ0KbGlicmFyeSgiZ3RhYmxlIikNCmBgYA0KDQoyMCAkXHRpbWVzJCA3IGBndGFibGVgDQoNCmBgYHtyfQ0KZ3AxMiA8LSByYmluZChnZ3Bsb3RHcm9iKGdwMSksIGdncGxvdEdyb2IoZ3AyKSwgc2l6ZSA9ICJsYXN0IikNCmdwMTINCmBgYA0KDQoqIERyYXcgbGluZSBieSBgZ3JpZDo6c2VnbWVudHNHcm9iKClgIG9uICAoYXBwcm94aW1hdGVseSkgYDIwMTYtMDEtMDFgDQoqIEFkZCBgc2VnbWVudHNHcm9iKClgIHRvIGV4aXN0aW5nIHBsb3QgYnkgYGd0YWJsZTo6Z3RhYmxlX2FkZF9ncm9iKClgDQogICAgKiBUbyBvdmVybGF5IG9uIHRoZSBlbnRpcmUgcGxvdCAoMjAgJFx0aW1lcyQgNyksIHNwZWNpZnkgYHQgPSAxLCBsID0gMSwgYiA9IDIwLCByID0gN2ANCg0KYGBge3J9DQpndCA8LSBndGFibGVfYWRkX2dyb2IoZ3AxMiwgc2VnbWVudHNHcm9iKHgwID0gMC40NTUsIHgxID0gMC40NTUsIHkwID0gMC4xLCB5MSA9IDAuOTgsIGdwPWdwYXIobHR5PSJkYXNoZWQiKSksIHQgPSAxLCBsID0gMSwgYiA9IDIwLCByID0gNywgeiA9IDEpDQpndA0KYGBgDQoNCkRyYXcgaXQNCmBgYHtyfQ0KZ3JpZC5hcnJhbmdlKGd0LCBsZWZ0ID0gdGV4dEdyb2IobGFiZWwgPSBleHByZXNzaW9uKCJUZW1wZXJhdHVyZSAoIn5kZWdyZWV+IkMpIiksIHJvdCA9IDkwKSwgcmlnaHQgPSAiUHJlY2lwaXRhdGlvbiAobW0pIikNCmBgYA0KDQpgYGB7cn0NCmRldnRvb2xzOjpzZXNzaW9uX2luZm8oKQ0KYGBg</div>
 
 
 

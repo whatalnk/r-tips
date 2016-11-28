@@ -36,26 +36,21 @@ summary(d)
 To set Temperature 0 -- 30 and Precipitation 0 -- 400, scale Precipitation by multiplying `30 / 400` to fit range of Temperature
 
 ```{r}
-d %>>% ggplot() + 
+gp1 <- d %>>% ggplot() + 
   geom_bar(mapping = aes(x = Date, y = Precipitation * 30 / 400), stat = "identity") + 
   geom_point(mapping = aes(x = Date, y = Temperature)) + 
   geom_line(mapping = aes(x = Date, y = Temperature)) + 
   scale_y_continuous(name = expression("Temperature ("~degree~"C)"), limits = c(0, 30))
+gp1
 ```
 
 Scale first Y axis by multiplying `400 / 300` to create secondary Y axis for Precipitation
 
-    * `scale_y_continuous(sec.axis = sec_axis(~ . * 400 / 30)) `
+* `scale_y_continuous(sec.axis = sec_axis(~ . * 400 / 30)) `
 
 ```{r}
-d %>>% ggplot() + 
-  geom_bar(mapping = aes(x = Date, y = Precipitation * 30 / 400), stat = "identity") + 
-  geom_point(mapping = aes(x = Date, y = Temperature)) + 
-  geom_line(mapping = aes(x = Date, y = Temperature)) + 
-  scale_y_continuous(
-    name = expression("Temperature ("~degree~"C)"),
-    sec.axis = sec_axis(~ . * 400 / 30 , name = "Precipitation (mm)"), 
-    limits = c(0, 30)) 
+gp1 <- gp1 %+% scale_y_continuous(name = expression("Temperature ("~degree~"C)"), sec.axis = sec_axis(~ . * 400 / 30 , name = "Precipitation (mm)"), limits = c(0, 30))
+gp1
 ```
 
 Final plot
@@ -108,7 +103,7 @@ To set Temperature -5 -- 20 and Precipitation 0 -- 250:
 * Scale first Y axis by adding `+5`, after that, scale Precipitation by multiplying `10` to create second Y axis for Precipitation
 
 ```{r}
-d2 %>>% ggplot() + 
+gp2 <- d2 %>>% ggplot() + 
   geom_bar(mapping = aes(x = Date, y = Precipitation / 10 - 5), stat = "identity", colour = gray(0.5), fill = gray(0.5)) + 
   geom_line(mapping = aes(x = Date, y = Temperature)) + 
   geom_point(mapping = aes(x = Date, y = Temperature), size = 3, shape = 21, fill = "white") + 
@@ -122,25 +117,14 @@ d2 %>>% ggplot() +
     panel.grid.major = element_blank(), 
     panel.grid.minor = element_blank()
   )
+gp2
 ```
 
 `geom_bar()` start from `0`, use `geom_segment()`
 
 ```{r}
-d2 %>>% ggplot() + 
-  geom_segment(mapping = aes(x = Date, y = Precipitation / 10 - 5, xend = Date, yend = -5), size = 11, lineend = "butt", colour = gray(0.5)) +
-  geom_line(mapping = aes(x = Date, y = Temperature)) +
-  geom_point(mapping = aes(x = Date, y = Temperature), size = 3, shape = 21, fill = "white") +
-  scale_x_date(name = "Month", breaks = seq.Date(as.Date("2015-01-01"), as.Date("2015-12-31"), by = "1 month"), labels = function(date){return(month(date, label = TRUE))}) +
-  scale_y_continuous(
-    name = expression("Temperature ("~degree~"C)"),
-    sec.axis = sec_axis(~ (. + 5) * 10 , name = "Precipitation (mm)"),
-    limits = c(-5, 20)) +
-  theme_bw() +
-  theme(
-    panel.grid.major = element_blank(),
-    panel.grid.minor = element_blank()
-  )
+gp2$layers[[1]] <- geom_segment(mapping = aes(x = Date, y = Precipitation / 10 - 5, xend = Date, yend = -5), size = 11, lineend = "butt", colour = gray(0.5))
+gp2
 ```
 
 ```{r}

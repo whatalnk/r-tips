@@ -69,22 +69,8 @@ grid.arrange(gp1, gp2, nrow = 2, heights = c(1, 1))
 
 Share X axis
 ```{r}
-gp1 <- d1 %>>% ggplot() + 
-  geom_segment(mapping = aes(x = Date, y = Precipitation * 30 / 400, xend = Date, yend = 0), size = 11, lineend = "butt", colour = gray(0.5)) +
-  geom_line(mapping = aes(x = Date, y = Temperature)) + 
-  geom_point(mapping = aes(x = Date, y = Temperature), size = 3, shape = 21, fill = "white") + 
-  scale_x_date(name = "Month", breaks = seq.Date(as.Date("2015-01-01"), as.Date("2015-12-31"), by = "1 month"), labels = function(date){return(month(date, label = TRUE))}) + 
-  scale_y_continuous(
-    name = expression("Temperature ("~degree~"C)"), 
-    sec.axis = sec_axis(~ . * 400 / 30 , name = "Precipitation (mm)"), 
-    limits = c(0, 30)) + 
-  theme_bw() + 
-  theme(
-    panel.grid.major = element_blank(), 
-    panel.grid.minor = element_blank(), 
-    axis.title.x = element_blank(), 
-    axis.text.x = element_blank()
-  )
+gp1$theme$axis.title.x <- element_blank()
+gp1$theme$axis.text.x <- element_blank()
 grid.arrange(gp1, gp2, nrow = 2, heights = c(1, 1))
 ```
 
@@ -107,37 +93,11 @@ Share Y axis title
 library(grid)
 ```
 ```{r}
-gp1 <- d1 %>>% ggplot() + 
-  geom_segment(mapping = aes(x = Date, y = Precipitation * 30 / 400, xend = Date, yend = 0), size = 11, lineend = "butt", colour = gray(0.5)) +
-  geom_line(mapping = aes(x = Date, y = Temperature)) + 
-  geom_point(mapping = aes(x = Date, y = Temperature), size = 3, shape = 21, fill = "white") + 
-  scale_x_date(name = "Month", breaks = seq.Date(as.Date("2015-01-01"), as.Date("2015-12-31"), by = "1 month"), labels = function(date){return(month(date, label = TRUE))}) + 
-  scale_y_continuous(
-    sec.axis = sec_axis(~ . * 400 / 30), 
-    limits = c(0, 30)) + 
-  theme_bw() + 
-  theme(
-    panel.grid.major = element_blank(), 
-    panel.grid.minor = element_blank(), 
-    axis.title.x = element_blank(), 
-    axis.text.x = element_blank(), 
-    axis.title.y = element_blank()) + 
-  annotate("text", x = as.Date("2015-01-01"), y = 28, label = "Naha", hjust = 0)
+gp1$theme$axis.title.y <- element_blank()
+gp1 <- gp1 + annotate("text", x = as.Date("2015-01-01"), y = 28, label = "Naha", hjust = 0)
 
-gp2 <- d2 %>>% ggplot() + 
-  geom_segment(mapping = aes(x = Date, y = Precipitation / 10 - 5, xend = Date, yend = -5), size = 11, lineend = "butt", colour = gray(0.5)) +
-  geom_line(mapping = aes(x = Date, y = Temperature)) +
-  geom_point(mapping = aes(x = Date, y = Temperature), size = 3, shape = 21, fill = "white") +
-  scale_x_date(name = "Month", breaks = seq.Date(as.Date("2015-01-01"), as.Date("2015-12-31"), by = "1 month"), labels = function(date){return(month(date, label = TRUE))}) +
-  scale_y_continuous(
-    sec.axis = sec_axis(~ (. + 5) * 10),
-    limits = c(-5, 20)) +
-  theme_bw() +
-  theme(
-    panel.grid.major = element_blank(),
-    panel.grid.minor = element_blank(), 
-    axis.title.y = element_blank()) + 
-  annotate("text", x = as.Date("2015-01-01"), y = 18, label = "Kushiro", hjust = 0)
+gp2$theme$axis.title.y <- element_blank()
+gp2 <- gp2 + annotate("text", x = as.Date("2015-01-01"), y = 18, label = "Kushiro", hjust = 0)
 
 grid.arrange(rbind(ggplotGrob(gp1), ggplotGrob(gp2), size = "last"), left = textGrob(label = expression("Temperature ("~degree~"C)"), rot = 90), right = "Precipitation (mm)")
 ```
