@@ -1,0 +1,173 @@
+---
+title: "ggplot2: Combine two plots by Row"
+output: html_notebook
+---
+
+Combine [two plots](https://whatalnk.github.io/r-tips/ggplot2-secondary-y-axis.nb.html) by row
+
+```{r}
+sapply(c("pipeR", "ggplot2", "readr", "lubridate"), require, character.only = TRUE)
+```
+Naha
+```{r}
+d1 <- read_csv("data/ggplot2-two-axis/naha.csv", skip = 5, col_names = c("Date", "Temperature", "Precipitation"), col_types = cols(col_date(format = "%Y/%m"), "d", "_", "_", "d", "_", "_", "_"), locale = locale(encoding = "SJIS"))
+head(d1)
+```
+
+Use `geom_segment()` to match x axis
+
+```{r}
+gp1 <- d1 %>>% ggplot() + 
+  geom_segment(mapping = aes(x = Date, y = Precipitation * 30 / 400, xend = Date, yend = 0), size = 11, lineend = "butt", colour = gray(0.5)) + 
+  geom_line(mapping = aes(x = Date, y = Temperature)) + 
+  geom_point(mapping = aes(x = Date, y = Temperature), size = 3, shape = 21, fill = "white") + 
+  scale_x_date(name = "Month", breaks = seq.Date(as.Date("2015-01-01"), as.Date("2015-12-31"), by = "1 month"), labels = function(date){return(month(date, label = TRUE))}) + 
+  scale_y_continuous(
+    name = expression("Temperature ("~degree~"C)"), 
+    sec.axis = sec_axis(~ . * 400 / 30 , name = "Precipitation (mm)"), 
+    limits = c(0, 30)) + 
+  theme_bw() + 
+  theme(
+    panel.grid.major = element_blank(), 
+    panel.grid.minor = element_blank()
+  )
+gp1
+```
+
+Kushiro
+```{r}
+d2 <- read_csv("data/ggplot2-two-axis/kushiro.csv", skip = 5, col_names = c("Date", "Temperature", "Precipitation"), col_types = cols(col_date(format = "%Y/%m"), "d", "_", "_", "d", "_", "_", "_"), locale = locale(encoding = "SJIS"))
+head(d2)
+```
+
+```{r}
+gp2 <- d2 %>>% ggplot() + 
+  geom_segment(mapping = aes(x = Date, y = Precipitation / 10 - 5, xend = Date, yend = -5), size = 11, lineend = "butt", colour = gray(0.5)) +
+  geom_line(mapping = aes(x = Date, y = Temperature)) +
+  geom_point(mapping = aes(x = Date, y = Temperature), size = 3, shape = 21, fill = "white") +
+  scale_x_date(name = "Month", breaks = seq.Date(as.Date("2015-01-01"), as.Date("2015-12-31"), by = "1 month"), labels = function(date){return(month(date, label = TRUE))}) +
+  scale_y_continuous(
+    name = expression("Temperature ("~degree~"C)"),
+    sec.axis = sec_axis(~ (. + 5) * 10 , name = "Precipitation (mm)"),
+    limits = c(-5, 20)) +
+  theme_bw() +
+  theme(
+    panel.grid.major = element_blank(),
+    panel.grid.minor = element_blank()
+  )
+gp2
+```
+
+Combine by `gridExtra::grid.arrange()`
+
+```{r}
+library("gridExtra")
+```
+```{r}
+grid.arrange(gp1, gp2, nrow = 2, heights = c(1, 1))
+```
+
+Share X axis
+```{r}
+gp1 <- d1 %>>% ggplot() + 
+  geom_segment(mapping = aes(x = Date, y = Precipitation * 30 / 400, xend = Date, yend = 0), size = 11, lineend = "butt", colour = gray(0.5)) +
+  geom_line(mapping = aes(x = Date, y = Temperature)) + 
+  geom_point(mapping = aes(x = Date, y = Temperature), size = 3, shape = 21, fill = "white") + 
+  scale_x_date(name = "Month", breaks = seq.Date(as.Date("2015-01-01"), as.Date("2015-12-31"), by = "1 month"), labels = function(date){return(month(date, label = TRUE))}) + 
+  scale_y_continuous(
+    name = expression("Temperature ("~degree~"C)"), 
+    sec.axis = sec_axis(~ . * 400 / 30 , name = "Precipitation (mm)"), 
+    limits = c(0, 30)) + 
+  theme_bw() + 
+  theme(
+    panel.grid.major = element_blank(), 
+    panel.grid.minor = element_blank(), 
+    axis.title.x = element_blank(), 
+    axis.text.x = element_blank()
+  )
+grid.arrange(gp1, gp2, nrow = 2, heights = c(1, 1))
+```
+
+Fix the height of above plot
+
+* Create grob by `ggplot2::ggplotGrob()` 
+* Combine grob and fix the height by `gridExtra::rbind(grob1, grob2, size = "last")`
+* Draw by `gridExtra::grid.arrange()`
+
+```{r}
+grid.arrange(rbind(ggplotGrob(gp1), ggplotGrob(gp2), size = "last"))
+```
+
+Share Y axis title
+
+* Draw first Y axis by parameter `left` of `grid.arrange()`, second Y axis by `right`
+* As for `expression()`, use `grid::textGrob()`
+
+```{r}
+library(grid)
+```
+```{r}
+gp1 <- d1 %>>% ggplot() + 
+  geom_segment(mapping = aes(x = Date, y = Precipitation * 30 / 400, xend = Date, yend = 0), size = 11, lineend = "butt", colour = gray(0.5)) +
+  geom_line(mapping = aes(x = Date, y = Temperature)) + 
+  geom_point(mapping = aes(x = Date, y = Temperature), size = 3, shape = 21, fill = "white") + 
+  scale_x_date(name = "Month", breaks = seq.Date(as.Date("2015-01-01"), as.Date("2015-12-31"), by = "1 month"), labels = function(date){return(month(date, label = TRUE))}) + 
+  scale_y_continuous(
+    sec.axis = sec_axis(~ . * 400 / 30), 
+    limits = c(0, 30)) + 
+  theme_bw() + 
+  theme(
+    panel.grid.major = element_blank(), 
+    panel.grid.minor = element_blank(), 
+    axis.title.x = element_blank(), 
+    axis.text.x = element_blank(), 
+    axis.title.y = element_blank()) + 
+  annotate("text", x = as.Date("2015-01-01"), y = 28, label = "Naha", hjust = 0)
+
+gp2 <- d2 %>>% ggplot() + 
+  geom_segment(mapping = aes(x = Date, y = Precipitation / 10 - 5, xend = Date, yend = -5), size = 11, lineend = "butt", colour = gray(0.5)) +
+  geom_line(mapping = aes(x = Date, y = Temperature)) +
+  geom_point(mapping = aes(x = Date, y = Temperature), size = 3, shape = 21, fill = "white") +
+  scale_x_date(name = "Month", breaks = seq.Date(as.Date("2015-01-01"), as.Date("2015-12-31"), by = "1 month"), labels = function(date){return(month(date, label = TRUE))}) +
+  scale_y_continuous(
+    sec.axis = sec_axis(~ (. + 5) * 10),
+    limits = c(-5, 20)) +
+  theme_bw() +
+  theme(
+    panel.grid.major = element_blank(),
+    panel.grid.minor = element_blank(), 
+    axis.title.y = element_blank()) + 
+  annotate("text", x = as.Date("2015-01-01"), y = 18, label = "Kushiro", hjust = 0)
+
+grid.arrange(rbind(ggplotGrob(gp1), ggplotGrob(gp2), size = "last"), left = textGrob(label = expression("Temperature ("~degree~"C)"), rot = 90), right = "Precipitation (mm)")
+```
+
+# Draw line from top of above plot to bottom of below plot
+```{r}
+library("gtable")
+```
+
+20 $\times$ 7 `gtable`
+
+```{r}
+gp12 <- rbind(ggplotGrob(gp1), ggplotGrob(gp2), size = "last")
+gp12
+```
+
+* Draw line by `grid::segmentsGrob()` on  (approximately) `2016-01-01`
+* Add `segmentsGrob()` to existing plot by `gtable::gtable_add_grob()`
+    * To overlay on the entire plot (20 $\times$ 7), specify `t = 1, l = 1, b = 20, r = 7`
+
+```{r}
+gt <- gtable_add_grob(gp12, segmentsGrob(x0 = 0.455, x1 = 0.455, y0 = 0.1, y1 = 0.98, gp=gpar(lty="dashed")), t = 1, l = 1, b = 20, r = 7, z = 1)
+gt
+```
+
+Draw it
+```{r}
+grid.arrange(gt, left = textGrob(label = expression("Temperature ("~degree~"C)"), rot = 90), right = "Precipitation (mm)")
+```
+
+```{r}
+devtools::session_info()
+```
