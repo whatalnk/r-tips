@@ -1,0 +1,148 @@
+---
+title: "ggplot2: Secondary Y axis"
+output: html_notebook
+---
+
+Use parameter `sec.axis` of `scale_y_continuous()`
+
+# Simple example
+```{r}
+sapply(c("pipeR", "ggplot2", "readr", "lubridate"), require, character.only = TRUE)
+```
+Temperature and precipitation in Naha city, Okinawa, Japan (2015)
+
+* Obtained from Japan meteorological agency
+```{r}
+d <- read_csv("data/ggplot2-two-axis/naha.csv", skip = 5, col_names = c("Date", "Temperature", "Precipitation"), col_types = cols(col_date(format = "%Y/%m"), "d", "_", "_", "d", "_", "_", "_"), locale = locale(encoding = "SJIS"))
+head(d)
+```
+Precipitation
+```{r}
+d %>>% ggplot() + 
+  geom_bar(mapping = aes(x = Date, y = Precipitation), stat = "identity") + 
+  ylab("Precipitation (mm)")
+```
+Temperature
+```{r}
+d %>>% ggplot() + 
+  geom_point(mapping = aes(x = Date, y = Temperature)) + 
+  geom_line(mapping = aes(x = Date, y = Temperature)) + 
+  ylab(expression("Temperature ("~degree~"C)"))
+```
+Range of data
+```{r}
+summary(d)
+```
+To set Temperature 0 -- 30 and Precipitation 0 -- 400, scale Precipitation by multiplying `30 / 400` to fit range of Temperature
+
+```{r}
+d %>>% ggplot() + 
+  geom_bar(mapping = aes(x = Date, y = Precipitation * 30 / 400), stat = "identity") + 
+  geom_point(mapping = aes(x = Date, y = Temperature)) + 
+  geom_line(mapping = aes(x = Date, y = Temperature)) + 
+  scale_y_continuous(name = expression("Temperature ("~degree~"C)"), limits = c(0, 30))
+```
+
+Scale first Y axis by multiplying `400 / 300` to create secondary Y axis for Precipitation
+
+    * `scale_y_continuous(sec.axis = sec_axis(~ . * 400 / 30)) `
+
+```{r}
+d %>>% ggplot() + 
+  geom_bar(mapping = aes(x = Date, y = Precipitation * 30 / 400), stat = "identity") + 
+  geom_point(mapping = aes(x = Date, y = Temperature)) + 
+  geom_line(mapping = aes(x = Date, y = Temperature)) + 
+  scale_y_continuous(
+    name = expression("Temperature ("~degree~"C)"),
+    sec.axis = sec_axis(~ . * 400 / 30 , name = "Precipitation (mm)"), 
+    limits = c(0, 30)) 
+```
+
+Final plot
+```{r}
+d %>>% ggplot() + 
+  geom_bar(mapping = aes(x = Date, y = Precipitation * 30 / 400), stat = "identity", colour = gray(0.5), fill = gray(0.5)) + 
+  geom_line(mapping = aes(x = Date, y = Temperature)) + 
+  geom_point(mapping = aes(x = Date, y = Temperature), size = 3, shape = 21, fill = "white") + 
+  scale_x_date(name = "Month", breaks = seq.Date(as.Date("2015-01-01"), as.Date("2015-12-31"), by = "1 month"), labels = function(date){return(month(date, label = TRUE))}) + 
+  scale_y_continuous(
+    name = expression("Temperature ("~degree~"C)"), 
+    sec.axis = sec_axis(~ . * 400 / 30 , name = "Precipitation (mm)"), 
+    limits = c(0, 30)) + 
+  theme_bw() + 
+  theme(
+    panel.grid.major = element_blank(), 
+    panel.grid.minor = element_blank()
+  )
+```
+
+# Complex example: data contains negative values
+Temperature and precipitation in Kushiro city, Hokkaido, Japan (2015)
+
+* Obtained from Japan meteorological agency
+
+```{r}
+d2 <- read_csv("data/ggplot2-two-axis/kushiro.csv", skip = 5, col_names = c("Date", "Temperature", "Precipitation"), col_types = cols(col_date(format = "%Y/%m"), "d", "_", "_", "d", "_", "_", "_"), locale = locale(encoding = "SJIS"))
+head(d2)
+```
+Precipitation
+```{r}
+d2 %>>% ggplot() + 
+  geom_bar(mapping = aes(x = Date, y = Precipitation), stat = "identity") + 
+  ylab("Precipitation (mm)")
+```
+Temperature
+```{r}
+d2 %>>% ggplot() + 
+  geom_point(mapping = aes(x = Date, y = Temperature)) + 
+  geom_line(mapping = aes(x = Date, y = Temperature)) + 
+  ylab(expression("Temperature ("~degree~"C)"))
+```
+
+```{r}
+summary(d2)
+```
+
+To set Temperature -5 -- 20 and Precipitation 0 -- 250: 
+* Scale Precipitation by multiplying `1/10` to fit range of Temperature, after that, scale Precipitation by adding `-5`
+* Scale first Y axis by adding `+5`, after that, scale Precipitation by multiplying `10` to create second Y axis for Precipitation
+
+```{r}
+d2 %>>% ggplot() + 
+  geom_bar(mapping = aes(x = Date, y = Precipitation / 10 - 5), stat = "identity", colour = gray(0.5), fill = gray(0.5)) + 
+  geom_line(mapping = aes(x = Date, y = Temperature)) + 
+  geom_point(mapping = aes(x = Date, y = Temperature), size = 3, shape = 21, fill = "white") + 
+  scale_x_date(name = "Month", breaks = seq.Date(as.Date("2015-01-01"), as.Date("2015-12-31"), by = "1 month"), labels = function(date){return(month(date, label = TRUE))}) + 
+  scale_y_continuous(
+    name = expression("Temperature ("~degree~"C)"), 
+    sec.axis = sec_axis(~ (. + 5) * 10 , name = "Precipitation (mm)"), 
+    limits = c(-5, 20)) + 
+  theme_bw() + 
+  theme(
+    panel.grid.major = element_blank(), 
+    panel.grid.minor = element_blank()
+  )
+```
+
+`geom_bar()` start from `0`, use `geom_segment()`
+
+```{r}
+d2 %>>% ggplot() + 
+  geom_segment(mapping = aes(x = Date, y = Precipitation / 10 - 5, xend = Date, yend = -5), size = 11, lineend = "butt", colour = gray(0.5)) +
+  geom_line(mapping = aes(x = Date, y = Temperature)) +
+  geom_point(mapping = aes(x = Date, y = Temperature), size = 3, shape = 21, fill = "white") +
+  scale_x_date(name = "Month", breaks = seq.Date(as.Date("2015-01-01"), as.Date("2015-12-31"), by = "1 month"), labels = function(date){return(month(date, label = TRUE))}) +
+  scale_y_continuous(
+    name = expression("Temperature ("~degree~"C)"),
+    sec.axis = sec_axis(~ (. + 5) * 10 , name = "Precipitation (mm)"),
+    limits = c(-5, 20)) +
+  theme_bw() +
+  theme(
+    panel.grid.major = element_blank(),
+    panel.grid.minor = element_blank()
+  )
+```
+
+```{r}
+devtools::session_info()
+```
