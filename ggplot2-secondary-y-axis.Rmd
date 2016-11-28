@@ -3,6 +3,12 @@ title: "ggplot2: Secondary Y axis"
 output: html_notebook
 ---
 
+---
+
+* Edit: Incrementally change existing plot (2016-11-28)
+
+---
+
 Use parameter `sec.axis` of `scale_y_continuous()`
 
 # Simple example
