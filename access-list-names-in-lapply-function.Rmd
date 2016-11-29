@@ -1,0 +1,39 @@
+---
+title: "Access list names in lapply function"
+output: html_notebook
+---
+
+```{r}
+sapply(c("pipeR", "dplyr", "purrr"), require, character.only = TRUE)
+```
+```{r}
+l <- list(
+  d1 = data_frame(v1 = month.abb, v2 = runif(12, min = 0, max = 100)), 
+  d2 = data_frame(v1 = month.abb, v2 = runif(12, min = 0, max = 1000))
+)
+l
+```
+
+```{r}
+names(l)
+```
+Access list `names` in lapply function
+
+## `lapply` over `names(l)`
+```{r}
+names(l) %>>% lapply(function(x){
+  l[[x]] %>>% dplyr::mutate(dname = x)
+})
+```
+
+## `purrr::map2()`
+```{r}
+purrr::map2(l, names(l), function(x, y){
+  x %>>% dplyr::mutate(dname = y)
+})
+```
+
+
+```{r}
+devtools::session_info()
+```
