@@ -7,3 +7,4 @@ R tips
 * [Joining multiple data frames](https://whatalnk.github.io/r-tips/joining-multiple-data-frames.nb.html)
 * [ggplot2: Secondary Y axis](https://whatalnk.github.io/r-tips/ggplot2-secondary-y-axis.nb.html)
 * [ggplot2: Combine two plots by Row](https://whatalnk.github.io/r-tips/ggplot2-rbind.nb.html)
+* [Access list names in lapply function](https://whatalnk.github.io/r-tips/access-list-names-in-lapply-function.nb.html)
